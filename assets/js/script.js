@@ -1,1 +1,1 @@
-fetch("https://api.algobook.info/v1/watches/all").then(res=>res.json()).then(sa3a=> console.log(sa3a))
+fetch("https://api.jsonbin.io/v3/b/672cdaf0e41b4d34e4503495").then(res=>(res.json())).then(watch=>console.log(watch.record))
