@@ -1,0 +1,226 @@
+{
+  "categories": [
+    {
+      "category": "Classic & Formal Watches",
+      "image": "url",
+      "products": [
+        {
+          "id": 1,
+          "title": "Fossil Men's Grant Chronograph Leather Watch",
+          "price": 129.95,
+          "description": "A classic and timeless leather strap chronograph watch with an elegant design. Perfect for casual and formal wear.",
+          "image": "FossilMen.jpg",
+          "rating": {
+            "rate": 4.5,
+            "count": 120
+          }
+        },
+        {
+          "id": 17,
+          "title": "Fossil Women's Jacqueline Leather Watch",
+          "price": 109.99,
+          "description": "A sophisticated leather strap watch with Roman numeral markers and a slim design, perfect for everyday wear.",
+          "image": "FossilWomen.jpg",
+          "image1": "FossilWomen1.jpg",
+          "image2": "FossilWomen2.jpg",
+          "image3": "FossilWomen3.jpg",
+          "rating": {
+            "rate": 4.4,
+            "count": 679
+          }
+        },
+        {
+          "id": 18,
+          "title": "Omega Seamaster Diver 300M",
+          "price": 5200,
+          "description": "A luxurious and iconic dive watch with a ceramic bezel, stainless steel case, and water resistance up to 300 meters.",
+          "image": "Omega.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 150
+          }
+        },
+        {
+          "id": 22,
+          "title": "Rolex Datejust 41",
+          "price": 9200,
+          "description": "A timeless and elegant men's watch featuring a 41mm stainless steel case, fluted bezel, and automatic movement.",
+          "image": "SeikoMen.jpg",
+          "rating": {
+            "rate": 4.9,
+            "count": 200
+          }
+        }
+      ]
+    },
+    {
+      "category": "Eco-Friendly Watches",
+      "image": "url",
+      "products": [
+        {
+          "id": 2,
+          "title": "Seiko Men's Solar Stainless Steel Watch",
+          "price": 175.3,
+          "description": "This Seiko Solar watch is powered by light and features a classic design with stainless steel casing and water resistance.",
+          "image": "SeikoMen.jpg",
+          "rating": {
+            "rate": 4.3,
+            "count": 259
+          }
+        },
+        {
+          "id": 6,
+          "title": "Citizen Women's Eco-Drive Watch",
+          "price": 168,
+          "description": "Powered by light, this eco-friendly watch features a sophisticated design with a stainless steel bracelet and a stylish dial.",
+          "image": "CitizenWomen.jpg",
+          "rating": {
+            "rate": 3.9,
+            "count": 70
+          }
+        },
+        {
+          "id": 19,
+          "title": "Garmin Fenix 7 Solar Watch",
+          "price": 849.99,
+          "description": "A solar-powered, GPS-enabled sports and outdoor watch with advanced tracking features and rugged durability.",
+          "image": "GarminFenix.png",
+          "rating": {
+            "rate": 4.7,
+            "count": 80
+          }
+        },
+        {
+          "id": 23,
+          "title": "Eco-Drive Satellite Wave Watch",
+          "price": 1500,
+          "description": "A high-tech solar-powered watch that syncs with GPS satellites for accurate timekeeping worldwide.",
+          "image": "Eco-Drive.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 45
+          }
+        }
+      ]
+    },
+    {
+      "category": "Sports & Outdoor Watches",
+      "image": "url",
+      "products": [
+        {
+          "id": 3,
+          "title": "Casio Men's G-Shock Digital Watch",
+          "price": 55.99,
+          "description": "Tough, rugged, and highly durable, the Casio G-Shock is designed for extreme conditions. Ideal for outdoor activities.",
+          "image": "CasioMens.jpg",
+          "image1": "CasioMens1.jpg",
+          "image2": "CasioMens2.jpg",
+          "image3": "CasioMens3.jpg",
+          "rating": {
+            "rate": 4.7,
+            "count": 500
+          }
+        },
+        {
+          "id": 7,
+          "title": "Invicta Men's Pro Diver Quartz Watch",
+          "price": 79.99,
+          "description": "A reliable dive watch with a stainless steel case and water resistance up to 200 meters, ideal for swimming and diving.",
+          "image": "InvictaMens.jpg",
+          "rating": {
+            "rate": 3.5,
+            "count": 400
+          }
+        },
+        {
+          "id": 11,
+          "title": "Suunto Core All Black Military Watch",
+          "price": 299,
+          "description": "A durable, multi-functional outdoor watch featuring an altimeter, barometer, and compass, designed for extreme adventures.",
+          "image": "SuuntoCore.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 319
+          }
+        },
+        {
+          "id": 15,
+          "title": "Timex Women's Expedition Scout Watch",
+          "price": 69.99,
+          "description": "This rugged, reliable outdoor watch features an Indiglo light-up dial and a durable, water-resistant case.",
+          "image": "TimexWomen's.jpg",
+          "rating": {
+            "rate": 4.1,
+            "count": 235
+          }
+        },
+        {
+          "id": 24,
+          "title": "Garmin Instinct Solar Outdoor Watch",
+          "price": 399.99,
+          "description": "A solar-powered outdoor GPS watch with built-in heart rate monitoring, GPS, and weather tracking.",
+          "image": "GarminInstinct.jpg",
+          "image1": "GarminInstinct1.jpg",
+          "image2": "GarminInstinct2.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 75
+          }
+        }
+      ]
+    },
+    {
+      "category": "Casual & Everyday Watches",
+      "image": "url",
+      "products": [
+        {
+          "id": 4,
+          "title": "Timex Men's Weekender Watch",
+          "price": 39.99,
+          "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
+          "image": "TimexMens.jpg",
+          "rating": {
+            "rate": 3.8,
+            "count": 430
+          }
+        },
+        {
+          "id": 16,
+          "title": "Casio Women's Classic Analog Watch",
+          "price": 29.95,
+          "description": "A timeless and affordable analog watch with a simple, elegant design and water resistance.",
+          "image": "CasioWomens.jpg",
+          "rating": {
+            "rate": 4.0,
+            "count": 340
+          }
+        },
+        {
+          "id": 21,
+          "title": "Michael Kors Women's Parker Chronograph Watch",
+          "price": 250.00,
+          "description": "A stylish and elegant chronograph watch with a gold-tone stainless steel bracelet and crystal-accented bezel.",
+          "image": "MichaelKorsWomens.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 90
+          }
+        },
+        {
+          "id": 25,
+          "title": "Fossil Women's Carlie Mini Stainless Steel Watch",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "FossilWomens.jpg",
+          "image1": "FossilWomens2.jpg",
+          "image2": "FossilWomens3.jpg",
+          
+          "rating": {
+            "rate": 4.4,
+            "count": 210
+          }
+        }
+      ]
+    }
+  ]
+}

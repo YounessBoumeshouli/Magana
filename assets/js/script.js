@@ -1,1 +1,4 @@
-fetch("https://api.jsonbin.io/v3/b/672cdaf0e41b4d34e4503495").then(res=>(res.json())).then(watch=>console.log(watch.record))
+// res[0].products[0].image
+fetch("http://localhost:3000/categories")
+.then(res=>res.json())
+.then(res=>document.getElementById("test").innerHTML=`<img src="./assets/images/Product/${res[0].products[0].image}">`)    
