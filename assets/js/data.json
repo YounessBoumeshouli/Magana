@@ -1,4 +1,5 @@
-[
+{
+  "categories": [
     {
       "category": "Classic & Formal Watches",
       "image": "url",
@@ -8,7 +9,7 @@
           "title": "Fossil Men's Grant Chronograph Leather Watch",
           "price": 129.95,
           "description": "A classic and timeless leather strap chronograph watch with an elegant design. Perfect for casual and formal wear.",
-          "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "image": "./assets/images/Product/FossilMen.jpg",
           "rating": {
             "rate": 4.5,
             "count": 120
@@ -19,10 +20,35 @@
           "title": "Fossil Women's Jacqueline Leather Watch",
           "price": 109.99,
           "description": "A sophisticated leather strap watch with Roman numeral markers and a slim design, perfect for everyday wear.",
-          "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+          "image": "./assets/images/Product/FossilWomen.jpg",
+          "image1": "./assets/images/Product/FossilWomen1.jpg",
+          "image2": "./assets/images/Product/FossilWomen2.jpg",
+          "image3": "./assets/images/Product/FossilWomen3.jpg",
           "rating": {
             "rate": 4.4,
             "count": 679
+          }
+        },
+        {
+          "id": 18,
+          "title": "Omega Seamaster Diver 300M",
+          "price": 5200,
+          "description": "A luxurious and iconic dive watch with a ceramic bezel, stainless steel case, and water resistance up to 300 meters.",
+          "image": "./assets/images/Product/Omega.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 150
+          }
+        },
+        {
+          "id": 22,
+          "title": "Rolex Datejust 41",
+          "price": 9200,
+          "description": "A timeless and elegant men's watch featuring a 41mm stainless steel case, fluted bezel, and automatic movement.",
+          "image": "./assets/images/Product/SeikoMen.jpg",
+          "rating": {
+            "rate": 4.9,
+            "count": 200
           }
         }
       ]
@@ -36,7 +62,7 @@
           "title": "Seiko Men's Solar Stainless Steel Watch",
           "price": 175.3,
           "description": "This Seiko Solar watch is powered by light and features a classic design with stainless steel casing and water resistance.",
-          "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+          "image": "./assets/images/Product/SeikoMen.jpg",
           "rating": {
             "rate": 4.3,
             "count": 259
@@ -47,10 +73,32 @@
           "title": "Citizen Women's Eco-Drive Watch",
           "price": 168,
           "description": "Powered by light, this eco-friendly watch features a sophisticated design with a stainless steel bracelet and a stylish dial.",
-          "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+          "image": "./assets/images/Product/CitizenWomen.jpg",
           "rating": {
             "rate": 3.9,
             "count": 70
+          }
+        },
+        {
+          "id": 19,
+          "title": "Garmin Fenix 7 Solar Watch",
+          "price": 849.99,
+          "description": "A solar-powered, GPS-enabled sports and outdoor watch with advanced tracking features and rugged durability.",
+          "image": "./assets/images/Product/GarminFenix.png",
+          "rating": {
+            "rate": 4.7,
+            "count": 80
+          }
+        },
+        {
+          "id": 23,
+          "title": "Eco-Drive Satellite Wave Watch",
+          "price": 1500,
+          "description": "A high-tech solar-powered watch that syncs with GPS satellites for accurate timekeeping worldwide.",
+          "image": "./assets/images/Product/Eco-Drive.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 45
           }
         }
       ]
@@ -64,7 +112,10 @@
           "title": "Casio Men's G-Shock Digital Watch",
           "price": 55.99,
           "description": "Tough, rugged, and highly durable, the Casio G-Shock is designed for extreme conditions. Ideal for outdoor activities.",
-          "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+          "image": "./assets/images/Product/CasioMens.jpg",
+          "image1": "./assets/images/Product/CasioMens1.jpg",
+          "image2": "./assets/images/Product/CasioMens2.jpg",
+          "image3": "./assets/images/Product/CasioMens3.jpg",
           "rating": {
             "rate": 4.7,
             "count": 500
@@ -75,7 +126,7 @@
           "title": "Invicta Men's Pro Diver Quartz Watch",
           "price": 79.99,
           "description": "A reliable dive watch with a stainless steel case and water resistance up to 200 meters, ideal for swimming and diving.",
-          "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+          "image": "./assets/images/Product/InvictaMens.jpg",
           "rating": {
             "rate": 3.5,
             "count": 400
@@ -86,7 +137,7 @@
           "title": "Suunto Core All Black Military Watch",
           "price": 299,
           "description": "A durable, multi-functional outdoor watch featuring an altimeter, barometer, and compass, designed for extreme adventures.",
-          "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+          "image": "./assets/images/Product/SuuntoCore.jpg",
           "rating": {
             "rate": 4.6,
             "count": 319
@@ -97,10 +148,23 @@
           "title": "Timex Women's Expedition Scout Watch",
           "price": 69.99,
           "description": "This rugged, reliable outdoor watch features an Indiglo light-up dial and a durable, water-resistant case.",
-          "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+          "image": "./assets/images/Product/TimexWomen's.jpg",
           "rating": {
             "rate": 4.1,
             "count": 235
+          }
+        },
+        {
+          "id": 24,
+          "title": "Garmin Instinct Solar Outdoor Watch",
+          "price": 399.99,
+          "description": "A solar-powered outdoor GPS watch with built-in heart rate monitoring, GPS, and weather tracking.",
+          "image": "./assets/images/Product/GarminInstinct.jpg",
+          "image1": "./assets/images/Product/GarminInstinct1.jpg",
+          "image2": "./assets/images/Product/GarminInstinct2.jpg",
+          "rating": {
+            "rate": 4.8,
+            "count": 75
           }
         }
       ]
@@ -114,7 +178,7 @@
           "title": "Timex Men's Weekender Watch",
           "price": 39.99,
           "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
-          "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+          "image": "./assets/images/Product/TimexMens.jpg",
           "rating": {
             "rate": 3.8,
             "count": 430
@@ -125,141 +189,38 @@
           "title": "Casio Women's Classic Analog Watch",
           "price": 29.95,
           "description": "A timeless and affordable analog watch with a simple, elegant design and water resistance.",
-          "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+          "image": "./assets/images/Product/CasioWomens.jpg",
           "rating": {
             "rate": 4.0,
             "count": 340
           }
-        }
-      ]
-    },
-    {
-      "category": "Luxury Watches",
-      "image": "url",
-      "products": [
+        },
         {
-          "id": 5,
+          "id": 21,
           "title": "Michael Kors Women's Parker Chronograph Watch",
-          "price": 249.99,
-          "description": "Sleek and stylish, this Michael Kors watch features a bold, eye-catching design with a chronograph dial and rhinestone accents.",
-          "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+          "price": 250.00,
+          "description": "A stylish and elegant chronograph watch with a gold-tone stainless steel bracelet and crystal-accented bezel.",
+          "image": "./assets/images/Product/MichaelKorsWomens.jpg",
           "rating": {
             "rate": 4.6,
-            "count": 400
+            "count": 90
           }
         },
         {
-          "id": 8,
-          "title": "Rolex Submariner Men's Watch",
-          "price": 8299.99,
-          "description": "A luxurious and iconic dive watch by Rolex, known for its durability, precision, and high-end design.",
-          "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+          "id": 25,
+          "title": "Fossil Women's Carlie Mini Stainless Steel Watch",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "./assets/images/Product/FossilWomens.jpg",
+          "image1": "./assets/images/Product/FossilWomens2.jpg",
+          "image2": "./assets/images/Product/FossilWomens3.jpg",
+          
           "rating": {
-            "rate": 4.9,
-            "count": 100
-          }
-        }
-      ]
-    },
-    {
-      "category": "Fitness & Smartwatches",
-      "image": "url",
-      "products": [
-        {
-          "id": 9,
-          "title": "Garmin Forerunner 235 GPS Watch",
-          "price": 249.99,
-          "description": "Track your fitness with this GPS-enabled smartwatch featuring heart rate monitoring and activity tracking features.",
-          "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-          "rating": {
-            "rate": 4.2,
-            "count": 203
-          }
-        },
-        {
-          "id": 12,
-          "title": "Samsung Galaxy Watch 4",
-          "price": 249.99,
-          "description": "A stylish and functional smartwatch with advanced health tracking, fitness features, and a sleek AMOLED display.",
-          "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
-          "rating": {
-            "rate": 4.7,
-            "count": 400
-          }
-        },
-        {
-          "id": 13,
-          "title": "Acer Smartwatch",
-          "price": 199,
-          "description": "A fitness-focused smartwatch with heart rate monitoring, step counting, and sleep tracking features, perfect for active individuals.",
-          "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
-          "rating": {
-            "rate": 3.5,
-            "count": 250
-          }
-        },
-        {
-          "id": 14,
-          "title": "Fossil Women's Hybrid HR Hybrid Smartwatch",
-          "price": 179.99,
-          "description": "A hybrid smartwatch that blends traditional analog design with modern fitness and smart technology.",
-          "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
-          "rating": {
-            "rate": 4.3,
-            "count": 140
-          }
-        },
-        {
-          "id": 18,
-          "title": "Garmin Venu 2S Smartwatch",
-          "price": 399.99,
-          "description": "A GPS smartwatch that tracks your health and fitness metrics with advanced features and a sleek AMOLED touchscreen.",
-          "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-          "rating": {
-            "rate": 4.6,
-            "count": 130
-          }
-        },
-        {
-          "id": 19,
-          "title": "Fitbit Versa 3 Health and Fitness Smartwatch",
-          "price": 229.95,
-          "description": "Track your health and fitness with this advanced smartwatch, featuring heart rate monitoring, GPS, and built-in Amazon Alexa.",
-          "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-          "rating": {
-            "rate": 4.5,
-            "count": 146
-          }
-        },
-        {
-          "id": 20,
-          "title": "Garmin Fenix 6X Pro Solar Smartwatch",
-          "price": 849.99,
-          "description": "A premium GPS smartwatch with solar charging, advanced fitness and outdoor features, perfect for adventurers and athletes.",
-          "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
-          "rating": {
-            "rate": 4.7,
-            "count": 145
-          }
-        }
-      ]
-    },
-    {
-      "category": "Smartwatches & Technology",
-      "image": "url",
-      "products": [
-        {
-          "id": 10,
-          "title": "Apple Watch Series 6 GPS + Cellular",
-          "price": 399,
-          "description": "A high-tech smartwatch with fitness and health tracking, customizable watch faces, and a sleek design.",
-          "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-          "rating": {
-            "rate": 4.8,
-            "count": 470
+            "rate": 4.4,
+            "count": 210
           }
         }
       ]
     }
   ]
-  
+}
