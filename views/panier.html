@@ -109,21 +109,29 @@
 		document.getElementById('panierid').classList.add("hidden")
 	}
 
-	localStorage.setItem("nam","hamza");
-	localStorage.setItem("age","200");
-	localStorage.setItem("salary","10");
-	localStorage.removeItem("nam");
-	localStorage.clear();
-	var produit = {
-		"id": 17,
-			"title": "Fossil Women's Jacqueline Leather Watch",
-			"price": 109.99
-		}
-		
-	localStorage.setItem("${1}",produit);
+var index =1;
+let Membres = JSON.parse(localStorage.getItem(index)) || [];
 
+    let Membre1 = {
+        id : 1,
+          title : "Fossil Men's Grant Chronograph Leather Watch",
+          price: 129.95,
+          numbre:2
 
-
+    }
+        let Membre2 = {
+          id: 1,
+          title : "Fossil Men's Grant Chronograph Leather Watch",
+           price: 129.95,
+           numbre:1
+        // id : Date.now()
+    }
+    
+    Membres.push(Membre1);
+    localStorage.setItem(1, JSON.stringify(Membres));
+    Membres.push(Membre2);
+    localStorage.setItem(2, JSON.stringify(Membres));
+    // index ++;
 	
 	</script>
 </body>
