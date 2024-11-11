@@ -1,3 +1,17 @@
+fetch("http://localhost:3000/categories")
+.then(res=>res.json())
+.then(res=>
+    res.forEach(categorie => {
+        document.getElementById("CategoriesContainer").innerHTML += `
+<div class="CategoryWatch">
+    <img src="./assets/images/Product/${categorie.products[0].image} ">
+</div>
+`
+    })
+
+    
+) 
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -10,11 +24,13 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+    
   let i;
-  let slides = document.getElementsByClassName("Catalog-slideb");
+  let slides = document.getElementsByClassName("CategoryWatch");
   let dots = document.getElementsByClassName("dot");
 
   if (n > slides.length) { slideIndex = 1; }
+  console.log(slides.length)
   if (n < 1) { slideIndex = slides.length; }
 
   for (i = 0; i < slides.length; i++) {
