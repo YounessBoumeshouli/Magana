@@ -30,7 +30,43 @@
         }
     </style>
 </head>
-<body>
-    
+
+<body class="bg-white text-gray-900">
+    <header class="m-2 text-white flex justify-between items-center">
+        <img src="MA-removebg-preview.png" alt="magana logo" width="120">
+        <nav>
+            <ul class="flex space-x-8 text-black">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">Catalogue</a></li>
+                <li><a href="#" class="hover:underline">Details</a></li>
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline"><img src="shopping-cart (1).png" alt="shopping-cart" width="30"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <h1 class="text-5xl font-bold mb-4 text-center">Product <span class="text-orange-500">List</span></h1>
+        <hr class="w-48 h-1 mx-auto my-auto border-0 rounded md:my-5 dark:bg-orange-500">
+        <div class="flex justify-center mb-6">
+            <input type="text" id="search" class="border border-black p-3 w-1/3 mb-5 rounded-xl" placeholder="Enter your dream watch">
+            <button onclick="searchProducts()" class="bg-orange-500 text-white p-3 mb-5 rounded-xl border-black border">Search</button>
+        </div>
+        <div class="flex justify-center space-x-20 mb-6">
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('all')">ALL</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('classic')">Classic</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('leather')">Leather</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('square')">Square</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('round')">Round</button>
+        </div>
+        <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Product items will be here by JavaScript -->
+        </div>
+        <div class="pagination mt-6 flex justify-center">
+            <a class="bg-black hover:bg-orange-500" href="#" onclick="prevPage()" id="prev-page bg-orange-500">&laquo; 1</a>
+            <a class="bg-black hover:bg-orange-500" href="#" onclick="nextPage()" id="next-page bg-orange-500">2 &raquo;</a>
+        </div>
+    </main>
+    <script src="/assets/js/catalogue.js"></script>
 </body>
 </html>
