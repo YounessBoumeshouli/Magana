@@ -30,19 +30,19 @@ fetch("http://localhost:3000/categories")
 }
 
 
-function ShowBrand(){
-  document.getElementById("BrandsContainer").innerHTML=""
-  fetch("http://localhost:5000/brand")
-  .then(res=>res.json()
-  .then(res=>
-    res[0].array.forEach(element => {
+// function ShowBrand(){
+//   document.getElementById("BrandsContainer").innerHTML=""
+//   fetch("http://localhost:5000/brand")
+//   .then(res=>res.json()
+//   .then(res=>
+//     res[0].array.forEach(element => {
      
-      console.log(element)
-    });
-  )
-  )
+//       console.log(element)
+//     });
+//   )
+//   )
  
   
-}
-ShowBrand()
+// }
+// ShowBrand()
 
