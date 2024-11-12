@@ -24,17 +24,12 @@
 			<article class="flex w-full mb-10 flex-col overflow-y-auto" id="panier1">
 				
 			</article>
-			<article class="w-11/12" >
-				<div> 
-				</div>
-				<div class="flex flex-row justify-between w-full text-white">
-					<button class="bg-orange-500 w-20 ml-3 rounded-xl h-8 on" onclick="panier.html">View cart </button>
-					<button class="bg-orange-500 mr-3 w-20 rounded-xl">Checkout</button>
-				</div>
+			<article class="w-11/12" id="panier1button">
+
 			</article>
 		</section>
 		<section class="flex md:flex-col  flex-col justify-center items-center" id="page1">
-			<article class="flex flex-col  md:flex-row justify-center items-center  md:w-11/12 w-full">
+			<!-- <article class="flex flex-col  md:flex-row justify-center items-center  md:w-11/12 w-full">
 				<div class="w-11/12 border-2 h-14 md:h-32 md:justify-center md:w-3/12 flex  items-center">
 					<p class="ml-3 md:ml-0 md:justify-center text-red-500 hover:text-white text-xl font-serif md:text-center hover:bg-red-500 rounded-3xl w-5" onclick=""> X </p>
 				</div>
@@ -61,20 +56,18 @@
 					<lable class="ml-3 text-lg font-serif md:hidden"> subtotal : </lable>
 					<p class="mr-3 ">titre</p>
 				</div>
-			</article>
-			<article class="border-2 h-14 w-11/12   md:ml-0  border-t-0 flex justify-between "> 
+			</article> -->
+			<!-- <article class="border-2 h-14 w-11/12   md:ml-0  border-t-0 flex justify-between "> 
 				<button class="ml-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md"> on </button>
 				<button class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md"> va </button>
-			</article>
+			</article> -->
 		</section>
-		<section class=" mr-troix mt-8 md:w-2/5 w-11/12">
-		<h1 class="text-4xl font-serif "> Cart totals </h1>
+		<section class=" mr-troix mt-8 md:w-2/5 w-11/12" id="cartTotals">
+		<!-- <h1 class="text-4xl font-serif "> Cart totals </h1>
 			<article class="">
 				<table class="table-auto  w-full text-lg font-serif">
 				  <thead >
 				    <tr>
-				      <!-- <th></th> -->
-				      <!-- <th></th> -->
 				    </tr>
 				  </thead >
 				  <tbody class="border-2">
@@ -94,12 +87,13 @@
 				  </tbody>
 				</table>
 				<button class="bg-orange-500 w-full h-10 mt-3 rounded-md"> c </button>
-			</article>
+			</article> -->
 		</section>
 	</main>
 	<footer>
 	</footer>
-	<script>
+	<script src="./../assets/js/panier.js"></script>
+	<!-- <script>
 	function fermepanier(){
 		document.getElementById('panierid').classList.add("hidden")
 	}
@@ -141,6 +135,7 @@ panairid.innerHTML+=`
 					</div>
 				</div>
 `;
+
 page.innerHTML+=`
 <article class="flex flex-col  md:flex-row justify-center items-center  md:w-11/12 w-full mb-1">
 				<div class="w-11/12 border-2 h-14 md:h-32 md:justify-center md:w-3/12 flex  items-center">
@@ -151,28 +146,59 @@ page.innerHTML+=`
 				</div>
 				<div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-l-0 md:border-r-0 md:h-32  md:justify-center">
 					<lable class="ml-3 text-lg font-serif md:hidden "> Product :  </lable>
-					<p class="mr-3 text-blue-500 ">titre</p>
+					<p class="mr-3 text-blue-500 ">${produit.title}</p>
 				</div>
 				<div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-r-0 md:justify-center md:w-8/12 md:h-32">
 					<lable class="ml-3 text-lg font-serif md:hidden"> Price : </lable>
-					<p class="mr-3 ">titre</p>
+					<p class="mr-3 ">$${produit.price}</p>
 				</div>
 				<div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-r-0 md:justify-center md:h-32 ">
 					<label class="ml-3 font-serif text-lg md:hidden"> Quantity :</label>
 					<div  class="flex  lg:mr-0 mr-8  "> 
-						<button class="border-2 w-10 h-10 ">+</button>
-						<input type="text" class="w-10 border-2 border-l-0 border-r-0 text-center" value="5">
-						<button class="w-10 border-2">-</button>
+						<button class="border-2 w-10 h-10 " onclick="incrimet(${produit.id})">+</button>
+						<input type="text" class="w-10 border-2 border-l-0 border-r-0 text-center" value="${produit.num}" id="quantity">
+						<button class="w-10 border-2" onclik="descrimet()">-</button>
 					</div>
 				</div>
 				<div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:justify-center md:w-8/12 md:h-32">
 					<lable class="ml-3 text-lg font-serif md:hidden"> subtotal : </lable>
-					<p class="mr-3 ">titre</p>
+					<p class="mr-3 ">$${produit.num*produit.price}</p>
 				</div>
 			</article>
 
 `;
- })
-	</script>
+ });
+
+ if(Mypanier.length>0)
+ {
+	panairid.innerHTML=`
+	<article class="border-2 h-14 w-11/12   md:ml-0  border-t-0 flex justify-between "> 
+				<button class="ml-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md"> on </button>
+				<button class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md"> va </button>
+			</article>`
+ }
+ function incrimet(index){	
+	// alert("produit.title");
+	Mypanier.forEach(produit=>{
+		if(index==produit.id){
+			if(document.getElementById('quantity').value>0)
+			document.getElementById('quantity').value--;
+			// break;
+		}
+	})
+ }
+ function subtotal(){
+	var sub = 0;
+	Mypanier.forEach(produit=>{
+		sub+=produit.price * produit.num;
+	})
+	return sub;
+ }
+ panairid.innerHTML=`<article class="border-2 h-14 w-11/12   md:ml-0  border-t-0 flex justify-between "> 
+				<button class="ml-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md"> on </button>
+				<button class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md"> va </button>
+			</article>`;
+ 
+	</script> -->
 </body>
 <html>
