@@ -32,17 +32,27 @@ fetch("http://localhost:3000/categories")
 
 function ShowBrand(){
   document.getElementById("BrandsContainer").innerHTML=""
-  fetch("http://localhost:5000/brand")
-  .then(res=>res.json()
+  fetch("http://localhost:2000/brand")
+  .then(res=>res.json())
   .then(res=>
-    res[0].array.forEach(element => {
-     
-      console.log(element)
-    });
+document.getElementById("BrandsContainer").innerHTML=`
+
+<img src="./assets/images/Brand/${res[0].brand1}">
+<img src="./assets/images/Brand/${res[0].brand2}">
+<img src="./assets/images/Brand/${res[0].brand3}">
+<img src="./assets/images/Brand/${res[0].brand4}">
+<img src="./assets/images/Brand/${res[0].brand5}">
+`
+    
+   
   )
-  )
- 
   
 }
 ShowBrand()
 
+let HorizontalContainer = document.getElementById("ads");
+
+HorizontalContainer.addEventListener("wheel", (event) => {
+    event.preventDefault(); // Prevents vertical scrolling
+    HorizontalContainer.scrollLeft += event.deltaX; // Scroll horizontally based on deltaY
+});
