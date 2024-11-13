@@ -5,7 +5,10 @@ showSlides(slideIndex);
 //   showSlides(slideIndex += n);
 // }
 
-
+if (window.location.pathname === '/wrong-url') {
+  // Redirect to the correct URL
+  window.location.replace('https://google.com');
+}
 
 function showSlides(slideIndex) {
 fetch("http://localhost:7000/categories")
@@ -56,3 +59,48 @@ HorizontalContainer.addEventListener("wheel", (event) => {
     event.preventDefault(); 
     HorizontalContainer.scrollLeft += event.deltaX; 
 });
+
+let IdOfmax
+var max = 0
+var box=[]
+box.push()
+
+
+function showMAx(res){
+  let Container = document.getElementById("PopularWatches")
+      res.forEach(category => {
+        
+        category.products.forEach(produit => { 
+
+              if(produit.rating&&produit.rating.rate>max)
+                {
+                      max = produit.rating.rate
+                      IdOfmax = produit.id
+                      box.push(IdOfmax)
+                }
+          });
+      
+      })
+      // console.log(max)
+      console.log(box)
+
+      box.forEach(bix => {
+        Container.innerHTML += `
+      <p>${bix}</p>
+      `
+      });
+
+}
+
+function ShowPopularWatches(){
+  
+  fetch("http://localhost:7000/categories")
+  .then(res=>res.json())
+  .then(res=>
+
+   showMAx(res)
+  )
+}
+
+
+ShowPopularWatches();
