@@ -53,11 +53,16 @@
             <button onclick="searchProducts()" class="bg-orange-500 text-white p-3 mb-5 rounded-xl border-black border">Search</button>
         </div>
         <div class="flex justify-center space-x-20 mb-6">
-            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('all')">ALL</button>
+            <!-- <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('all')">ALL</button>
             <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('classic')">Classic</button>
             <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('leather')">Leather</button>
             <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('square')">Square</button>
-            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('round')">Round</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts('round')">Round</button> -->
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts(100)">ALL</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts(6)">Classic</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts(7)">Leather</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts(5)">Square</button>
+            <button class="filter-button px-10 py-2 bg-black text-white hover:bg-gray-700 rounded-lg" onclick="filterProducts(4)">Round</button>
         </div>
         <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Product items will be here by JavaScript -->
@@ -66,7 +71,8 @@
             <a class="bg-black hover:bg-orange-500" href="#" onclick="prevPage()" id="prev-page bg-orange-500">&laquo; 1</a>
             <a class="bg-black hover:bg-orange-500" href="#" onclick="nextPage()" id="next-page bg-orange-500">2 &raquo;</a>
         </div>
+        
     </main>
-    <script src="/assets/js/catalogue.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
