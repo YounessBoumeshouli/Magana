@@ -8,7 +8,7 @@ showSlides(slideIndex);
 
 
 function showSlides(slideIndex) {
-fetch("http://localhost:3000/categories")
+fetch("http://localhost:7000/categories")
 .then(res=>res.json())
 .then(res=>
 
