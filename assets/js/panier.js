@@ -58,7 +58,7 @@ page.innerHTML+=`
             </div>
             <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-l-0 md:border-r-0 md:h-32  md:justify-center">
                 <lable class="ml-3 text-lg font-serif md:hidden "> Product :  </lable>
-                <p class="mr-3 text-blue-500 ">${produit.title}</p>
+                <p class="mx-auto text-blue-500 ">${produit.title}</p>
             </div>
             <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-r-0 md:justify-center md:w-8/12 md:h-32">
                 <lable class="ml-3 text-lg font-serif md:hidden"> Price : </lable>
@@ -66,7 +66,7 @@ page.innerHTML+=`
             </div>
             <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-r-0 md:justify-center md:h-32 ">
                 <label class="ml-3 font-serif text-lg md:hidden"> Quantity :</label>
-                <div  class="flex  lg:mr-0 mr-8  "> 
+                <div  class="flex  lg:mr-0 md:mr-0 mr-8  "> 
                     <button class="border-2 w-10 h-10 " onclick="incrimet(${produit.id})">+</button>
                     <input type="text" class="w-10 border-2 border-l-0 border-r-0 text-center" value="${produit.quantity}" id="quantity${produit.id}">
                     <button class="w-10 border-2" onclick="descrimet(${produit.id})">-</button>
@@ -137,7 +137,7 @@ function carte(index){
 				    </tr>
 				  </tbody>
 				</table>
-				<button class="bg-orange-500 w-full h-10 mt-3 rounded-md"> 	Proceed to checkout </button>
+				<button class="bg-orange-500 w-full h-10 mt-3 rounded-md" id="ovrforme()"> 	Proceed to checkout </button>
 			</article>
 `  ; 
 }
@@ -170,7 +170,9 @@ Mypanier.forEach(produit=>{
     }
 });
 }
-
+function ovrforme(){
+document.getElementById("formRIB").classList.add("block");
+}
 function subtotal(){
 var sub = 0;
 Mypanier.forEach(produit=>{
@@ -179,10 +181,14 @@ Mypanier.forEach(produit=>{
 return sub;
 }
 function coupon(){
+    if(localStorage.getItem("coupon")!=""){
     if(document.getElementById("couponid").value == "09DD")
         localStorage.setItem("coupon",somme()*0.9);
-
+    else 
+    localStorage.setItem("coupon",somme());
     carte(localStorage.getItem("coupon"));
+}
+
 }
 
 function ubdate(){
