@@ -73,20 +73,24 @@
                 <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a> -->
                 <div style="text-align:center">
-                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="currentSlide(1)">1</span> 
-                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="currentSlide(2)">2</span> 
-                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="currentSlide(3)">3   </span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(1)">1</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(2)">2</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(3)">3</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(4)">4</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(5)">5</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(6)">6</span> 
+                    
                   </div>
             </div>
         </div>
     </section>
 
     <!-- Available Brands Section -->
-    <section id="brands" class="py-20 bg-white">
+    <section id="brands" class="py-20 bg-red-100">
         <div class="max-w-7xl mx-auto px-6 sm:px-12">
             <h2 class="text-3xl font-bold mb-12 text-center"> Brands</h2>
-            <div class="flex justify-center space-x-12">
-                <img src="https://via.placeholder.com/100" alt="Brand 1" class="w-24 h-24 object-contain">
+            <div class="flex justify-center space-x-12" id="BrandsContainer">
+                <img src="./assets/images/Brand/" alt="Brand 1" class="w-24 h-24 object-contain">
                 <img src="https://via.placeholder.com/100" alt="Brand 2" class="w-24 h-24 object-contain">
                 <img src="https://via.placeholder.com/100" alt="Brand 3" class="w-24 h-24 object-contain">
                 <img src="https://via.placeholder.com/100" alt="Brand 4" class="w-24 h-24 object-contain">
