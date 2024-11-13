@@ -112,9 +112,9 @@
           "title": "Casio Men's G-Shock Digital Watch",
           "price": 55.99,
           "description": "Tough, rugged, and highly durable, the Casio G-Shock is designed for extreme conditions. Ideal for outdoor activities.",
-          "image": "CasioMens.jpg",
+          "image": "CasioMens2.jpg",
           "image1": "CasioMens1.jpg",
-          "image2": "CasioMens2.jpg",
+          "image2": "CasioMens.jpg",
           "image3": "CasioMens3.jpg",
           "rating": {
             "rate": 4.7,
@@ -219,6 +219,248 @@
             "rate": 4.4,
             "count": 210
           }
+        }
+      ]
+    },
+    {
+      "category": "Round",
+      "image": "url",
+      "products": [
+        {
+          "id": 100,
+          "title": "Black Shadow",
+          "price": 39.99,
+          "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
+          "image": "watch 1.png",
+          "rating": {
+            "rate": 3.8,
+            "count": 430
+          }
+        },
+        {
+          "id": 16,
+          "title": "Orange Watch",
+          "price": 29.95,
+          "description": "A timeless and affordable analog watch with a simple, elegant design and water resistance.",
+          "image": "CasioWomens.jpg",
+          "rating": {
+            "rate": 4.0,
+            "count": 340
+          }
+        },
+        {
+          "id": 21,
+          "title": "Diamond Watches",
+          "price": 250.00,
+          "description": "A stylish and elegant chronograph watch with a gold-tone stainless steel bracelet and crystal-accented bezel.",
+          "image": "MichaelKorsWomens.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 90
+          }
+        },
+        {
+          "id": 25,
+          "title": "Micfor",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "FossilWomens.jpg",
+          "image1": "FossilWomens2.jpg",
+          "image2": "FossilWomens3.jpg",
+          
+          "rating": {
+            "rate": 4.4,
+            "count": 210
+          }
+        },
+        {
+          "id": 25,
+          "title": "Sekonda Spirit",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "FossilWomens.jpg",
+          "image1": "FossilWomens2.jpg",
+          "image2": "FossilWomens3.jpg",
+          
+          "rating": {
+            "rate": 4.4,
+            "count": 210
+          }
+        },
+        {
+          "id": 25,
+          "title": "Silver Watch",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "FossilWomens.jpg",
+          "image1": "FossilWomens2.jpg",
+          "image2": "FossilWomens3.jpg",
+          
+          "rating": {
+            "rate": 4.4,
+            "count": 210
+          }
+        }
+      ]
+    },
+    {
+      "category": "Square",
+      "image": "url",
+      "products": [
+        {
+          "id": 100,
+          "title": "Portable Square",
+          "price": 39.99,
+          "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
+          "image": "watch 2.png",
+          "rating": {
+            "rate": 3.8,
+            "count": 430
+          }
+        },
+        {
+          "id": 16,
+          "title": "Rios Watch",
+          "price": 29.95,
+          "description": "A timeless and affordable analog watch with a simple, elegant design and water resistance.",
+          "image": "CasioWomens.jpg",
+          "rating": {
+            "rate": 4.0,
+            "count": 340
+          }
+        },
+        {
+          "id": 21,
+          "title": "Sekonda New",
+          "price": 250.00,
+          "description": "A stylish and elegant chronograph watch with a gold-tone stainless steel bracelet and crystal-accented bezel.",
+          "image": "MichaelKorsWomens.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 90
+          }
+        },
+        {
+          "id": 25,
+          "title": "Robo watch",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "FossilWomens.jpg",
+          "image1": "FossilWomens2.jpg",
+          "image2": "FossilWomens3.jpg",
+          
+          "rating": {
+            "rate": 4.4,
+            "count": 210
+          }
+        
+        }
+      ]
+    },{
+      "category": "Classic",
+      "image": "url",
+      "products": [
+        {
+          "id": 100,
+          "title": "Micfor",
+          "price": 39.99,
+          "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
+          "image": "watch 9.png",
+          "rating": {
+            "rate": 3.8,
+            "count": 430
+          }
+        },
+        {
+          "id": 16,
+          "title": "Rios Watch",
+          "price": 29.95,
+          "description": "A timeless and affordable analog watch with a simple, elegant design and water resistance.",
+          "image": "CasioWomens.jpg",
+          "rating": {
+            "rate": 4.0,
+            "count": 340
+          }
+        },
+        {
+          "id": 21,
+          "title": "Rolex V1",
+          "price": 250.00,
+          "description": "A stylish and elegant chronograph watch with a gold-tone stainless steel bracelet and crystal-accented bezel.",
+          "image": "MichaelKorsWomens.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 90
+          }
+        },
+        {
+          "id": 25,
+          "title": "White bird",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "FossilWomens.jpg",
+          "image1": "FossilWomens2.jpg",
+          "image2": "FossilWomens3.jpg",
+          
+          "rating": {
+            "rate": 4.4,
+            "count": 210
+          }
+        
+        }
+      ]
+    },
+    {
+      "category": "Leather",
+      "image": "url",
+      "products": [
+        {
+          "id": 100,
+          "title": "Portable Square",
+          "price": 39.99,
+          "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
+          "image": "watch 3.png",
+          "rating": {
+            "rate": 3.8,
+            "count": 430
+          }
+        },
+        {
+          "id": 16,
+          "title": "Diamond Watches",
+          "price": 29.95,
+          "description": "A timeless and affordable analog watch with a simple, elegant design and water resistance.",
+          "image": "CasioWomens.jpg",
+          "rating": {
+            "rate": 4.0,
+            "count": 340
+          }
+        },
+        {
+          "id": 21,
+          "title": "Micfor",
+          "price": 250.00,
+          "description": "A stylish and elegant chronograph watch with a gold-tone stainless steel bracelet and crystal-accented bezel.",
+          "image": "MichaelKorsWomens.jpg",
+          "rating": {
+            "rate": 4.6,
+            "count": 90
+          }
+        },
+        {
+          "id": 25,
+          "title": "Rios Watch",
+          "price": 94.95,
+          "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
+          "image": "FossilWomens.jpg",
+          "image1": "FossilWomens2.jpg",
+          "image2": "FossilWomens3.jpg",
+          
+          "rating": {
+            "rate": 4.4,
+            "count": 210
+          }
+        
         }
       ]
     }

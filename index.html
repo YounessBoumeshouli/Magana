@@ -3,15 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./assets/css/output.css">
+    <title>Watch Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Hola</h1>
-    <div id="test" class="bg-slate-600">
-       
-    </div>
-    <script src="./assets/js/script.js"></script>
+<body class="bg-gray-50 text-gray-800">
 
+    <!-- Navigation Bar -->
+    <header class="bg-gray-800 text-white py-4">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">WatchStore</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#best-sellers" class="hover:text-gray-400">Best Sellers</a></li>
+                    <li><a href="#categories" class="hover:text-gray-400">Categories</a></li>
+                    <li><a href="#brands" class="hover:text-gray-400">Brands</a></li>
+                    <li><a href="#ads" class="hover:text-gray-400">Ads</a></li>
+                    <li><a href="#popular" class="hover:text-gray-400">Popular</a></li>
+                    <li><a href="#news" class="hover:text-gray-400">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class=" text-white py-20 text-center flex">
+       
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 text-black">
+            <h1 class="text-4xl font-bold mb-4">Discover the Best Watches</h1>
+            <p class="text-lg mb-6">Explore our top-rated collection and find your perfect timepiece today.</p>
+            <a href="#best-sellers" class="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full hover:bg-yellow-600">Shop Now</a>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 flex flex-col items-center" id="HeaderContainer">
+            <img src="./assets/images/Home-images/imageHeader.png" class="w-96" alt="" srcset="">
+            <img src="./assets/images/Home-images/imageHeader2.png" class="w-{400px}" alt="" srcset="">
+            
+        </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section id="best-sellers" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            <h2 class="text-3xl font-bold mb-12 text-center">Best Sellers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                   
+                    <h3 class="text-xl font-semibold mb-2">From $500</h3>
+                    <p class="text-gray-600 mb-4">Watches For him</p>
+                    
+                    <button class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Buy Now</button>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+
+    <section  class="py-20 bg-gray-50 flex flex-col items-center">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12">
+       
+            <div class="Catalog-Propreties">
+                <div class="flex " id="CategoriesContainer"> 
+                    <div  class="Catalog-slideb fade" id="first"></div>
+                    <div  class="Catalog-slideb fade" id="second"></div>
+                    <div  class="Catalog-slideb fade" id="Third"></div>
+                    <div  class="Catalog-slideb fade" id="Forth"></div>
+                    <div  class="Catalog-slideb fade" id="Fivth"></div>
+                </div>
+                <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a> -->
+                <div style="text-align:center">
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(1)">1</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(2)">2</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(3)">3</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(4)">4</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(5)">5</span> 
+                    <span class="dot dot group relative cursor-pointer h-4 w-4 bg-gray-300 rounded-full transition-all duration-300 ease-in-out group-hover:bg-gray-500 group-active:bg-gray-400" onclick="showSlides(6)">6</span> 
+                    
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Brands Section -->
+    <section id="brands" class="py-20 bg-red-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            <h2 class="text-3xl font-bold mb-12 text-center"> Brands</h2>
+            <div class="flex justify-center space-x-12" id="BrandsContainer">
+                <img src="./assets/images/Brand/" alt="Brand 1" class="w-24 h-24 object-contain">
+                <img src="https://via.placeholder.com/100" alt="Brand 2" class="w-24 h-24 object-contain">
+                <img src="https://via.placeholder.com/100" alt="Brand 3" class="w-24 h-24 object-contain">
+                <img src="https://via.placeholder.com/100" alt="Brand 4" class="w-24 h-24 object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisements Section -->
+    <section id="ads" class="bg-blue-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 text-center">
+            <h3 class="text-2xl font-semibold mb-6">Special Offer</h3>
+            <p class="text-lg mb-6">Get 10% off on all watches this week only. Don't miss out on this amazing deal!</p>
+            <a href="#" class="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full hover:bg-yellow-600">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Most Popular Watches Section -->
+    <section id="popular" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            <h2 class="text-3xl font-bold mb-12 text-center">Most Popular Watches</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300" alt="Popular Watch 1" class="w-full h-56 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Classic Watch Model 1</h3>
+                    <span class="font-bold text-xl text-blue-600">$499.99</span>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300" alt="Popular Watch 2" class="w-full h-56 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Premium Watch Model 2</h3>
+                    <span class="font-bold text-xl text-blue-600">$799.99</span>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/300" alt="Popular Watch 3" class="w-full h-56 object-cover mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Stylish Watch Model 3</h3>
+                    <span class="font-bold text-xl text-blue-600">$599.99</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Perspectives Section -->
+    <section id="news" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            <h2 class="text-3xl font-bold mb-12 text-center">News & Perspectives</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">The Evolution of Watchmaking</h3>
+                    <p class="text-gray-600">A deep dive into the history and advancements in the watchmaking industry.</p>
+                    <a href="#" class="text-blue-600">Read More</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">Top 10 Watches of 2024</h3>
+                    <p class="text-gray-600">Discover the top 10 watches to watch out for in the upcoming year.</p>
+                    <a href="#" class="text-blue-600">Read More</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2">How to Choose the Right Watch</h3>
+                    <p class="text-gray-600">Learn how to pick a watch that matches your style and needs.</p>
+                    <a href="#" class="text-blue-600">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 flex justify-between items-center">
+            <p> 2024 WatchStore. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-400">Terms & Conditions</a>
+                <a href="#" class="hover:text-gray-400">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/home.js"></script>
 </body>
 </html>
