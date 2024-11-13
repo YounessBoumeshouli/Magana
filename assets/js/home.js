@@ -53,6 +53,6 @@ ShowBrand()
 let HorizontalContainer = document.getElementById("ads");
 
 HorizontalContainer.addEventListener("wheel", (event) => {
-    event.preventDefault(); // Prevents vertical scrolling
-    HorizontalContainer.scrollLeft += event.deltaX; // Scroll horizontally based on deltaY
+    event.preventDefault(); 
+    HorizontalContainer.scrollLeft += event.deltaX; 
 });
