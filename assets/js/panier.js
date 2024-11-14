@@ -3,9 +3,9 @@ function fermepanier(){
 }
 // id : Date.now()"id": 1,
 var listee=document.getElementsByClassName("mod");
-var opje={};
-opje1={id:1,image:"./../assets/images/Product/FossilMen.jpg",title: "Fossil Men's Grant Chronograph Leather Watch",price: 129.95,quantity:2}
-opje2={id: 17,image: "./../assets/images/Product/FossilWomen.jpg",title: "Fossil Women's Jacqueline Leather Watch",price: 109.99,quantity:1}
+
+var opje1={id:1,image:"./../assets/images/Product/FossilMen.jpg",title: "Fossil Men's Grant Chronograph Leather Watch",price: 129.95,quantity:2}
+var opje2={id: 17,image: "./../assets/images/Product/FossilWomen.jpg",title: "Fossil Women's Jacqueline Leather Watch",price: 109.99,quantity:1}
 opje3={id: 18,image: "./../assets/images/Product/Omega.jpg", title: "Omega Seamaster Diver 300M",price: 5200,quantity:3}
 
 let Mypanier = JSON.parse(localStorage.getItem('panier')) || [];
@@ -32,6 +32,9 @@ console.log("n");
 var panairid =document.getElementById("panier1");
 var page =document.getElementById("page1");
 // console.log(panairid);
+
+
+
 function afiche(){
 panairid.innerHTML="";
 page.innerHTML="";
@@ -47,7 +50,6 @@ panairid.innerHTML+=`
                 </div>
             </div>
 `;
-
 page.innerHTML+=`
 <article class="flex flex-col  md:flex-row justify-center items-center  md:w-11/12 w-full mb-1">
             <div class="w-11/12 border-2 h-14 md:h-32 md:justify-center md:w-3/12 flex  items-center">
@@ -218,3 +220,9 @@ function suprimepainer(index){
     console.log(Mypanier);
 }
 }
+var logo =document.getElementById('logoPanier');
+console.log(logo);
+logo.onclick= function(){
+    console.log("en click");
+}
+;
