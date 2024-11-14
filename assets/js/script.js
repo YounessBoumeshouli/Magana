@@ -1,14 +1,24 @@
-// burger menu js
+//burger menu first
 document.getElementById('menu-btn').addEventListener('click', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.toggle('hidden');
+  });
+
+
+
+
+
+// Toggle the visibility of the filter menu when the burger icon is clicked
+document.getElementById('filter-menu-btn').addEventListener('click', function () {
+    const filterMenu = document.getElementById('filter-menu');
+    filterMenu.classList.toggle('hidden');
 });
 
+// Pagination and Product Display
 let currentPage = 1;
 const itemsPerPage = 6;
 
 function displayProducts() {
-    console.log("all is run")
     const productContainer = document.getElementById('product-list');
     const productContainer2 = document.getElementById('product-list2');
     productContainer.innerHTML = '';
@@ -20,8 +30,7 @@ function displayProducts() {
         res.forEach(element => {
             const productElement = document.createElement('div');
             const productElement2 = document.createElement('div');
-           if(i < 6) {
-           
+            if (i < 6) {
                 productElement.classList.add('border', 'p-4', 'rounded-lg', 'shadow-md');
                 productElement.innerHTML += `
                     <img src="../assets/images/Product/${element.products[0].image}" alt="${element.products[0].image}" class="mb-4">
@@ -32,7 +41,7 @@ function displayProducts() {
                 `;
                 productContainer.appendChild(productElement);
                 i++;
-            }else{
+            } else {
                 productElement2.classList.add('border', 'p-4', 'rounded-lg', 'shadow-md');
                 productElement2.innerHTML += `
                     <img src="../assets/images/Product/${element.products[0].image}" alt="${element.products[0].image}" class="mb-4">
@@ -47,33 +56,32 @@ function displayProducts() {
         });
     })
 }
-function prevPage(){
-    const productContainer = document.getElementById('product-list');
-    const productContainer2 = document.getElementById('product-list2');
-    productContainer.classList.remove("hidden")
-    productContainer2.classList.add("hidden")
-}
-function nextPage(){
-    const productContainer = document.getElementById('product-list');
-    const productContainer2 = document.getElementById('product-list2');
-    productContainer2.classList.remove("hidden")
-    productContainer.classList.add("hidden")
 
+function prevPage() {
+    const productContainer = document.getElementById('product-list');
+    const productContainer2 = document.getElementById('product-list2');
+    productContainer.classList.remove("hidden");
+    productContainer2.classList.add("hidden");
 }
-// Function to handle the search operation
+
+function nextPage() {
+    const productContainer = document.getElementById('product-list');
+    const productContainer2 = document.getElementById('product-list2');
+    productContainer2.classList.remove("hidden");
+    productContainer.classList.add("hidden");
+}
+
 function searchProducts() {
-    const searchTerm = document.getElementById('search').value.toLowerCase();  // Get the search term
+    const searchTerm = document.getElementById('search').value.toLowerCase();
     const productContainer = document.getElementById('product-list');
-    productContainer.innerHTML = '';  // Clear current products
+    productContainer.innerHTML = '';
 
-    // Fetch products and filter based on the search term
     fetch("http://localhost:3000/categories")
     .then(res => res.json())
     .then(res => {
         let filteredProducts = [];
         
         res.forEach(element => {
-            // Filter products that match the search term (case-insensitive)
             const matchedProducts = element.products.filter(product => 
                 product.title.toLowerCase().includes(searchTerm) || 
                 product.description.toLowerCase().includes(searchTerm)
@@ -82,7 +90,6 @@ function searchProducts() {
             filteredProducts = filteredProducts.concat(matchedProducts);
         });
 
-        // Display the filtered products
         filteredProducts.forEach(product => {
             const productElement = document.createElement('div');
             productElement.classList.add('border', 'p-4', 'rounded-lg', 'shadow-md');
