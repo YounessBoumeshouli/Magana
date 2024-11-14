@@ -6,10 +6,10 @@
       "products": [
         {
           "id": 1,
-          "title": "Fossil Men's Grant Chronograph Leather Watch",
+          "title": "Robo watch",
           "price": 129.95,
           "description": "A classic and timeless leather strap chronograph watch with an elegant design. Perfect for casual and formal wear.",
-          "image": "watch 1.png",
+          "image": "watch 11.png",
           "rating": {
             "rate": 4.5,
             "count": 120
@@ -84,7 +84,7 @@
           "title": "Garmin Fenix 7 Solar Watch",
           "price": 849.99,
           "description": "A solar-powered, GPS-enabled sports and outdoor watch with advanced tracking features and rugged durability.",
-          "image": "GarminFenix.png",
+          "image": "watch 8.png",
           "rating": {
             "rate": 4.7,
             "count": 80
@@ -95,7 +95,7 @@
           "title": "Eco-Drive Satellite Wave Watch",
           "price": 1500,
           "description": "A high-tech solar-powered watch that syncs with GPS satellites for accurate timekeeping worldwide.",
-          "image": "Eco-Drive.jpg",
+          "image": "watch 4.png",
           "rating": {
             "rate": 4.6,
             "count": 45
@@ -300,10 +300,10 @@
       "products": [
         {
           "id": 24,
-          "title": "Portable Square",
+          "title": "White bird",
           "price": 15.00,
           "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
-          "image": "watch 3.png",
+          "image": "watch 10.png",
           "rating": {
             "rate": 3.8,
             "count": 430
