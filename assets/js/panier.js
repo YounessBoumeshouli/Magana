@@ -1,6 +1,3 @@
-function fermepanier(){
-    document.getElementById('panierid').classList.add("hidden")
-}
 var listee=document.getElementsByClassName("mod");
 
 let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
@@ -11,6 +8,7 @@ var page =document.getElementById("page1");
 async function afiche(){
 panairid.innerHTML="";
 page.innerHTML="";
+document.getElementById('numbrecom').innerText=Mypanier.length;
 fetch("http://localhost:4000/categories")
 .then(res => res.json())
 .then(res =>
@@ -199,4 +197,15 @@ function suprimepainer(index){
 }
 afiche();
 }
-var logo =document.getElementById('logoPanier');
+
+function fermepanier(){
+    document.getElementById('panierid').style.display="none";
+}
+document.getElementById('panierid').style.display ="none";
+var logo =document.getElementById('logopanier');
+logo.addEventListener('click',function(){
+    if(document.getElementById('panierid').style.display == "none")
+        document.getElementById('panierid').style.display ="flex";
+    else 
+    document.getElementById('panierid').style.display ="none";
+});
