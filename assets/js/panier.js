@@ -129,14 +129,15 @@ Mypanier.forEach(produit=>{
 // document.getElementById("formRIB").classList.add("block");
 // }
 
-let sub = 0;
+var sub = 0;
 async function subtotal() {
-    sub=0;
+   var  sub=0;
     const response = await fetch("http://localhost:4000/categories");
     const categories = await response.json();
+    Mypanier.forEach(produitlo => {
     categories.forEach(category => {
         category.products.forEach(product => {
-            Mypanier.forEach(produitlo => {
+           
                 if (produitlo.id == product.id) {
                     sub += product.price * produitlo.quantite;
                 }
@@ -151,10 +152,6 @@ async function subtotal() {
     document.getElementById('totalprice').innerText=sub;
 
 }
-
-
-// var lo =document.getElementById('Subtotalprice').value;
-
 
 
 let obj =JSON.parse(localStorage.getItem('coupon'))||[];
@@ -172,7 +169,6 @@ function coupon(){
     if(document.getElementById("couponid").value == "09DD"){
         obj[0].total = (sub*0.9).toFixed(2)    ;
         obj[0].numbr = 1;
-        //  document.getElementById("message").innerText = "You have enter the Coupon "
         localStorage.setItem("coupon",JSON.stringify(obj));
     }
 }
@@ -185,7 +181,6 @@ function ubdate(){
     if(Mypanier[i].quantite==0)
         Mypanier.splice(i,1);
     }
-    // localStorage.removeItem("ordreToCard");
     localStorage.setItem("ordreToCard",JSON.stringify(Mypanier));
     afiche();
 }
@@ -197,14 +192,11 @@ function suprimepainer(index){
     Mypanier.splice(i,1);
  
     localStorage.setItem("ordreToCard",JSON.stringify(Mypanier));
-    afiche();
+   
+    
+    subtotal();
     console.log(Mypanier);
 }
-subtotal()
+afiche();
 }
 var logo =document.getElementById('logoPanier');
-
-// console.log(logo);
-// logo.onclick = function(){
-//     console.log("en click");
-// }
