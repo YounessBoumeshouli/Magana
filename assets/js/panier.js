@@ -200,6 +200,7 @@ function suprimepainer(index){
     subtotal();
     console.log(Mypanier);
 }
+location.reload()
 }
 var logo =document.getElementById('logoPanier');
 
@@ -207,4 +208,15 @@ console.log(logo);
 logo.onclick= function(){
     if(document.getElementById('panierid').style.display == "felx")
         document.getElementById('panierid').classList.add("hidden")
+}
+
+
+function payment(){
+console.log("hola")
+
+    document.getElementById('containermain').style.display="none";
+    document.getElementById('Formulaire').classList.remove("hidden");
+    document.getElementById('containermain').classList.add("hidden");
+    // document.getElementsByName('footer').classList.add("hidden");
+    // document.getElementsByName('header').classList.add("hidden");
 }
