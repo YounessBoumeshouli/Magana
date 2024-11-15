@@ -14,7 +14,7 @@ async function afiche(){
 panairid.innerHTML="";
 page.innerHTML="";
 document.getElementById('numbrecom').innerText=Mypanier.length;
-fetch("http://localhost:4000/categories")
+fetch("http://localhost:3000/categories")
 .then(res => res.json())
 .then(res =>
     res.forEach(category => {
@@ -135,7 +135,7 @@ Mypanier.forEach(produit=>{
 var sub = 0;
 async function subtotal() {
    var  sub=0;
-    const response = await fetch("http://localhost:4000/categories");
+    const response = await fetch("http://localhost:3000/categories");
     const categories = await response.json();
     Mypanier.forEach(produitlo => {
     categories.forEach(category => {
@@ -200,6 +200,7 @@ function suprimepainer(index){
     subtotal();
     console.log(Mypanier);
 }
+location.reload()
 }
 var logo =document.getElementById('logoPanier');
 
@@ -207,4 +208,15 @@ console.log(logo);
 logo.onclick= function(){
     if(document.getElementById('panierid').style.display == "felx")
         document.getElementById('panierid').classList.add("hidden")
+}
+
+
+function payment(){
+console.log("hola")
+
+    document.getElementById('containermain').style.display="none";
+    document.getElementById('Formulaire').classList.remove("hidden");
+    document.getElementById('containermain').classList.add("hidden");
+    // document.getElementsByName('footer').classList.add("hidden");
+    // document.getElementsByName('header').classList.add("hidden");
 }
