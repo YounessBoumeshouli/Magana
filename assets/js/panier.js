@@ -2,30 +2,30 @@ function fermepanier(){
 document.getElementById('panierid').style.display="none";
 }
 fermepanier(); 
-var listee=document.getElementsByClassName("mod");
-let opje1={id:1,image:"./../assets/images/Product/FossilMen.jpg",title: "Fossil Men's Grant Chronograph Leather Watch",price: 129.95,quantity:2}
-let opje2={id: 17,image: "./../assets/images/Product/FossilWomen.jpg",title: "Fossil Women's Jacqueline Leather Watch",price: 109.99,quantity:1}
-let opje3={id: 18,image: "./../assets/images/Product/Omega.jpg", title: "Omega Seamaster Diver 300M",price: 5200,quantity:3}
-let Mypanier = JSON.parse(localStorage.getItem('panier')) || [];
-console.log(Mypanier);
-var id=0;
-if (Mypanier.length !== 0){
-   console.log(Mypanier)
-}else{
-    Mypanier.push(opje1);
-Mypanier.push(opje2);
-Mypanier.push(opje3);
-}
+// var listee=document.getElementsByClassName("mod");
+// let opje1={id:1,image:"./../assets/images/Product/FossilMen.jpg",title: "Fossil Men's Grant Chronograph Leather Watch",price: 129.95,quantity:2}
+// let opje2={id: 17,image: "./../assets/images/Product/FossilWomen.jpg",title: "Fossil Women's Jacqueline Leather Watch",price: 109.99,quantity:1}
+// let opje3={id: 18,image: "./../assets/images/Product/Omega.jpg", title: "Omega Seamaster Diver 300M",price: 5200,quantity:3}
+let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
+// console.log(Mypanier);
+// var id=0;
+// if (Mypanier.length !== 0){
+//    console.log(Mypanier)
+// }else{
+//     Mypanier.push(opje1);
+// Mypanier.push(opje2);
+// Mypanier.push(opje3);
+// }
 
-localStorage.setItem('panier',JSON.stringify(Mypanier));
-function afi(id){
-Mypanier.forEach(produit =>{
-if(produit.id==id){
-console.log("oui");
-}
-})}
-afi(0);
-console.log("n");
+// localStorage.setItem('panier',JSON.stringify(Mypanier));
+// function afi(id){
+// Mypanier.forEach(produit =>{
+// if(produit.id==id){
+// console.log("oui");
+// }
+// })}
+// afi(0);
+// console.log("n");
 // console.log(listee);
 var panairid =document.getElementById("panier1");
 var page =document.getElementById("page1");
@@ -33,7 +33,26 @@ var page =document.getElementById("page1");
 function afiche(){
 panairid.innerHTML="";
 page.innerHTML="";
+
+
+// fetch("http://localhost:4000/categories")
+//         .then(res => res.json())
+//         .then(res =>
+//             res.forEach(category => {
+
+//                 category.products.forEach(product => {
+        	
+//                     if (id == product.id) {
+
+
+fetch("http://localhost:4000/categories")
+.then(res => res.json())
+.then(res =>
+res.forEach(category => {
+
+    category.products.forEach(product => {
 Mypanier.forEach(produit =>{
+    if (id == product.id) {
 panairid.innerHTML+=`
             <div class="border-0 border-t-2  flex flex-row h-96 w-full mb-10">
                 <img src="${produit.image}" class=" w-20 h-20">
@@ -77,8 +96,13 @@ page.innerHTML+=`
         </article> 
 `;
 document.getElementById("numbrecom").textContent=Mypanier.length;
-});
-
+}
+    });
+}
+    )
+}
+)
+);
 if(Mypanier.length>0)
 {
 page.innerHTML+=`
@@ -195,7 +219,7 @@ function ubdate(){
         Mypanier.splice(i,1);
     }
     localStorage.clear();
-    localStorage.setItem("panier",JSON.stringify(Mypanier));
+    localStorage.setItem("ordreToCard",JSON.stringify(Mypanier));
     afiche();
 }
 // panairid.innerHTML=`<article class="border-2 h-14 w-11/12   md:ml-0  border-t-0 flex justify-between "> 
@@ -209,7 +233,7 @@ function suprimepainer(index){
     if(index==Mypanier[i].id)
     Mypanier.splice(i,1);
     localStorage.clear();
-    localStorage.setItem("panier",JSON.stringify(Mypanier));
+    localStorage.setItem("ordreToCard",JSON.stringify(Mypanier));
     afiche();
     console.log(Mypanier);
 }
