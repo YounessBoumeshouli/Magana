@@ -1,11 +1,50 @@
+
+
 {
-   "brand":[
+"DATA": [
     {
-        "brand1":"brand1.png",
-    "brand2":"brand2.png",
-    "brand3":"brand3.png",
-    "brand4":"brand4.png",
-    "brand5":"brand5.png"
-    }
-   ]
-}
+      "brands":
+        {
+            "brand1":"brand1.png",
+            "brand2":"brand2.png",
+            "brand3":"brand3.png",
+            "brand4":"brand4.png",
+            "brand5":"brand5.png"
+          },
+        "news":
+        {
+            "news1":{
+                "image":"News1.png",
+                "title":"Eye on Style : Glasses and Fashion",
+                "date":"july 31, 2023",
+                "description":"Lorem Ipsum is simply dummy text of the printing and typesetting"
+
+            },
+            "news2":{
+                "image":"News2.png",
+                "title":"Eye on Style : Glasses and Fashion",
+                "date":"july 31, 2023",
+                "description":"Lorem Ipsum is simply dummy text of the printing and typesetting"
+
+            },
+            "news3":{
+                "image":"News3.png",
+                "title":"Eye on Style : Glasses and Fashion",
+                "date":"july 31, 2023",
+                "description":"Lorem Ipsum is simply dummy text of the printing and typesetting"
+
+            }
+          },
+          "Ads":
+          {
+            "Ad1":"Adimage.png",
+            "Ad2":"Adimage2.png"
+          },
+          "Modals":
+          {
+            "modal":"Adimage.png",
+            "modal2":"Adimage2.png"
+          }
+        
+        }
+    ]}
