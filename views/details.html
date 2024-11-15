@@ -13,7 +13,44 @@
 </head>
 
 <body>
-    <main id="dt-main" class="md:mx-32 flex  flex-wrap md:flex-nowrap ">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex items-center justify-between p-4">
+
+          <div class="flex items-center">
+              <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20">
+            </div>
+    
+         
+          <nav class="hidden md:flex space-x-8">
+            <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">Catalogue</a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">Détails</a>
+            <a href="#" class="text-gray-800 hover:text-gray-600">About</a>
+            <a href="#" class="text-orange-500 text-2xl">
+              <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
+            </a>  
+          </nav>
+    
+          <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+              <a href="#" class="text-gray-800 text-2xl">
+                  <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
+                </a>  
+                <a href="#" class="text-orange-500 text-2xl">
+                  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
+                </a>  
+          </button>
+        </div>
+    
+  
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Détails</a>
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+
+        </div>
+      </header>
+    <main id="dt-main" class="md:mx-32 mt-5 flex  flex-wrap md:flex-nowrap ">
         <section class="dt-watch-side grid grid-cols-3 md:w-1/2" >
             <div class="col-span-3 max-w-full " id="dt-img-principale">
                 <!-- <img id="dt-main-image" src="../assets/images/Product/FossilWomen.jpg" alt="L'image principale de la montre"> -->
@@ -58,7 +95,7 @@
                         min="1" max="10">
                         <label for="dt-increase-quantity" class="sr-only">Augmenter la quantité</label>
                     <button id="dt-increase-quantity" class=" border border-black text-center font-bold text-2xl w-10 h-10 rounded-e-md">+</button>
-                    <button id="dt-add-to-cart" type="submit" class="bg-orange-600 text-black  text-center font-bold text-1xl w-[150px] h-10 rounded-md mx-12 hover:bg-orange-400 transition-all duration-500"><a href="/views/panier.html">Ajouter Au Panier</a>
+                    <button id="dt-add-to-cart"  class="bg-orange-600 text-black  text-center font-bold text-1xl w-[150px] h-10 rounded-md mx-12 hover:bg-orange-400 transition-all duration-500"><a href="">Ajouter Au Panier</a>
 </button>
                 </div>
 
@@ -66,6 +103,29 @@
 
         </section>
     </main>
+    <footer class="bg-gray-900 text-center py-6">
+        <div class="flex flex-col md:flex-row md:justify-center md:space-x-6 items-center space-y-4 md:space-y-0 mb-4">
+            <a href="#" class="text-orange-500 text-2xl">
+                <img src="../assets/images/magana images/twitter (1).png" alt="icon1" class="w-6 h-6">
+            </a>
+            <a href="#" class="text-orange-500 text-2xl">
+                <img src="../assets/images/magana images/facebook (1).png" alt="icon2" class="w-6 h-6">
+            </a>
+            <a href="#" class="text-orange-500 text-2xl">
+                <img src="../assets/images/magana images/instagram.png" alt="icon3" class="w-6 h-6">
+            </a>
+            <a href="#" class="text-orange-500 text-2xl">
+                <img src="../assets/images/magana images/mail.png" alt="icon4" class="w-6 h-6">
+            </a>
+        </div>
+        <p class="text-gray-500">Copyright ©2024 All rights reserved</p>
+    </footer>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+          const mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
     <script src="/assets/js/details.js" ></script>
 </body>
 
