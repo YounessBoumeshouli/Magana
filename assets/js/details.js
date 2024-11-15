@@ -57,10 +57,10 @@ document.getElementById('dt-add-to-cart').addEventListener('click',function(){
                 category.products.forEach(product => {
         
                     if (id == product.id) {
-                        document.getElementById('dt-img-principale').innerHTML = `<img  class="" id="dt-main-image" src="../assets/images/Product/${product.image}" alt="L'image principale de la montre">`
-                        document.getElementById('dt-img-complementaire1').innerHTML = `<img class="dt-small-images" src="../assets/images/Product/${product.image1}"alt="La premiere image complémentaire de la montre ">`
-                        document.getElementById('dt-img-complementaire2').innerHTML = `<img class="dt-small-images" src="../assets/images/Product/${product.image2}"alt="La deuxieme image complémentaire de la montre ">`
-                        document.getElementById('dt-img-complementaire3').innerHTML = `<img class="dt-small-images" src="../assets/images/Product/${product.image3}"alt="La troisieme image complémentaire de la montre ">`
+                        document.getElementById('dt-img-principale').innerHTML = `<img  class="rounded-3xl" id="dt-main-image" src="../assets/images/Product/${product.image}" alt="L'image principale de la montre">`
+                        document.getElementById('dt-img-complementaire1').innerHTML = `<img class="dt-small-images rounded-3xl" src="../assets/images/Product/${product.image1}"alt="La premiere image complémentaire de la montre ">`
+                        document.getElementById('dt-img-complementaire2').innerHTML = `<img class="dt-small-images rounded-3xl" src="../assets/images/Product/${product.image2}"alt="La deuxieme image complémentaire de la montre ">`
+                        document.getElementById('dt-img-complementaire3').innerHTML = `<img class="dt-small-images rounded-3xl" src="../assets/images/Product/${product.image3}"alt="La troisieme image complémentaire de la montre ">`
                         document.getElementById('dt-title').innerHTML = ` <h1>${product.title} </h1>`
                         document.getElementById('dt-descreption').innerHTML = `<P>${product.description} </P>`
                         document.getElementById('dt-price').innerHTML = `<P>${product.price} MAD </P>`       
