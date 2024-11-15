@@ -21,9 +21,9 @@
           "price": 109.99,
           "description": "A sophisticated leather strap watch with Roman numeral markers and a slim design, perfect for everyday wear.",
           "image": "FossilWomen.jpg",
-          "image1": "FossilWomen1.jpg",
-          "image2": "FossilWomen2.jpg",
-          "image3": "FossilWomen3.jpg",
+          "image1": "FossilWomens.jpg",
+          "image2": "FossilWomens2.jpg",
+          "image3": "FossilWomens3.jpg",
           "rating": {
             "rate": 4.4,
             "count": 679
@@ -159,6 +159,8 @@
           "image": "GarminInstinct.jpg",
           "image1": "GarminInstinct1.jpg",
           "image2": "GarminInstinct2.jpg",
+          "image3": "GarminInstinct2.jpg",
+
           "rating": {
             "rate": 4.8,
             "count": 75
