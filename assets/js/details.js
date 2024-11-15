@@ -63,7 +63,7 @@ document.getElementById('dt-add-to-cart').addEventListener('click',function(){
                         document.getElementById('dt-img-complementaire3').innerHTML = `<img class="dt-small-images rounded-3xl" src="../assets/images/Product/${product.image3}"alt="La troisieme image complémentaire de la montre ">`
                         document.getElementById('dt-title').innerHTML = ` <h1>${product.title} </h1>`
                         document.getElementById('dt-descreption').innerHTML = `<P>${product.description} </P>`
-                        document.getElementById('dt-price').innerHTML = `<P>${product.price} MAD </P>`       
+                        document.getElementById('dt-price').innerHTML = `<P>$ ${product.price}  </P>`       
                     }
                 });
         

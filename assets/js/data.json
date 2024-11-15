@@ -10,6 +10,10 @@
           "price": 129.95,
           "description": "A classic and timeless leather strap chronograph watch with an elegant design. Perfect for casual and formal wear.",
           "image": "watch 11.png",
+          "image1": "watch 11.png",
+          "image2": "watch_11-1.png",
+          "image3": "watch_11-2.png",
+
           "rating": {
             "rate": 4.5,
             "count": 120
@@ -63,6 +67,9 @@
           "price": 175.3,
           "description": "This Seiko Solar watch is powered by light and features a classic design with stainless steel casing and water resistance.",
           "image": "watch 2.png",
+          "image1": "watch_2-1.png",
+          "image2": "watch_2-2.png",
+          "image3": "watch_2-3.png",
           "rating": {
             "rate": 4.3,
             "count": 259
@@ -112,7 +119,11 @@
           "title": "Portable Square",
           "price": 55.99,
           "description": "Tough, rugged, and highly durable, the Casio G-Shock is designed for extreme conditions. Ideal for outdoor activities.",
-          "image": "watch 3.png",
+          "image": "watch_3.png",
+          "image1": "watch_3-1.png",
+          "image2": "watch_3-2.png",
+          "image3": "watch_3-3.png",
+
           "rating": {
             "rate": 4.7,
             "count": 500
@@ -160,7 +171,6 @@
           "image1": "GarminInstinct1.jpg",
           "image2": "GarminInstinct2.jpg",
           "image3": "GarminInstinct2.jpg",
-
           "rating": {
             "rate": 4.8,
             "count": 75
@@ -213,7 +223,6 @@
           "image": "FossilWomens.jpg",
           "image1": "FossilWomens2.jpg",
           "image2": "FossilWomens3.jpg",
-          
           "rating": {
             "rate": 4.4,
             "count": 210
@@ -264,7 +273,6 @@
           "price": 94.95,
           "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
           "image": "watch 5.png",
-          
           "rating": {
             "rate": 4.4,
             "count": 210
@@ -276,7 +284,6 @@
           "price": 94.95,
           "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
           "image": "watch 7.webp",
-    
           "rating": {
             "rate": 4.4,
             "count": 210
@@ -288,7 +295,6 @@
           "price": 94.95,
           "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
           "image": "watch 9.png",
-          
           "rating": {
             "rate": 4.4,
             "count": 210
@@ -306,6 +312,9 @@
           "price": 15.00,
           "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
           "image": "watch 10.png",
+          "image1": "watch_10-1.png",
+          "image2": "watch_10-2.png",
+          "image3": "watch_10-3.png",
           "rating": {
             "rate": 3.8,
             "count": 430
@@ -343,11 +352,10 @@
             "rate": 4.4,
             "count": 210
           }
-        
         }
-        
       ]
-    },{
+    },
+    {
       "category": "Classic",
       "image": "url",
       "products": [
@@ -390,12 +398,10 @@
           "price": 94.95,
           "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
           "image": "watch 10.png",
-          
           "rating": {
             "rate": 4.4,
             "count": 210
           }
-        
         }
       ]
     },
@@ -442,12 +448,10 @@
           "price": 94.95,
           "description": "A chic and versatile stainless steel watch with a slim profile and minimalist design, perfect for casual and everyday wear.",
           "image": "watch 6.png",
-          
           "rating": {
             "rate": 4.4,
             "count": 210
           }
-        
         }
       ]
     }
