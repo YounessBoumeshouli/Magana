@@ -37,13 +37,14 @@
           },
           "Ads":
           {
-            "Ad1":"Adimage.png",
+            "Ad1":"Adimage3.png",
             "Ad2":"Adimage2.png"
           },
           "Modals":
           {
-            "modal":"Adimage.png",
-            "modal2":"Adimage2.png"
+            "modal":"GarminFenix.png",
+            "modal2":"watch 8.png",
+            "modal3":"watch 7.webp"
           }
         
         }
