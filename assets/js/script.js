@@ -37,7 +37,7 @@ function displayProducts() {
                     <h2 class="text-xl font-bold">${element.products[0].title}</h2>
                     <p class="text-gray-700">$${element.products[0].price}</p>
                     <p class="text-gray-500 mb-4">${element.products[0].description}</p>
-                    <a href="product.html?id=${element.products[0].id}" class="text-orange-500 hover:underline">View Details</a>
+                    <a href="../views/details.html?=${element.products[0].id}" class="text-orange-500 hover:underline">View Details</a>
                 `;
                 productContainer.appendChild(productElement);
                 i++;
@@ -48,7 +48,7 @@ function displayProducts() {
                     <h2 class="text-xl font-bold">${element.products[0].title}</h2>
                     <p class="text-gray-700">$${element.products[0].price}</p>
                     <p class="text-gray-500 mb-4">${element.products[0].description}</p>
-                    <a href="product.html?id=${element.products[0].id}" class="text-orange-500 hover:underline">View Details</a>
+                   <a href="../views/details.html?=${element.products[0].id}" class="text-orange-500 hover:underline">View Details</a>
                 `;
                 productContainer2.appendChild(productElement2);
                 i++;
