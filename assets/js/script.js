@@ -1,12 +1,8 @@
-//burger menu first
+// Burger menu
 document.getElementById('menu-btn').addEventListener('click', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenu.classList.toggle('hidden');
-  });
-
-
-
-
+});
 
 // Toggle the visibility of the filter menu when the burger icon is clicked
 document.getElementById('filter-menu-btn').addEventListener('click', function () {
@@ -40,6 +36,8 @@ function displayProducts() {
                     <a href="../views/details.html?=${element.products[0].id}" class="text-orange-500 hover:underline">View Details</a>
                 `;
                 productContainer.appendChild(productElement);
+                // Apply hover animation
+                addHoverAnimation(productElement);
                 i++;
             } else {
                 productElement2.classList.add('border', 'p-4', 'rounded-lg', 'shadow-md');
@@ -48,13 +46,33 @@ function displayProducts() {
                     <h2 class="text-xl font-bold">${element.products[0].title}</h2>
                     <p class="text-gray-700">$${element.products[0].price}</p>
                     <p class="text-gray-500 mb-4">${element.products[0].description}</p>
-                   <a href="../views/details.html?=${element.products[0].id}" class="text-orange-500 hover:underline">View Details</a>
+                    <a href="../views/details.html?=${element.products[0].id}" class="text-orange-500 hover:underline">View Details</a>
                 `;
                 productContainer2.appendChild(productElement2);
+                // Apply hover animation
+                addHoverAnimation(productElement2);
                 i++;
             }
         });
     })
+    .catch(error => {
+        console.error('Error fetching products:', error);
+    });
+}
+
+function addHoverAnimation(element) {
+    // Add hover effect on the product card
+    element.addEventListener('mouseenter', function() {
+        // Scale up the card when mouse enters
+        element.style.transform = 'scale(1.05)';
+        element.style.transition = 'transform 0.3s ease';
+    });
+
+    element.addEventListener('mouseleave', function() {
+        // Scale back to original size when mouse leaves
+        element.style.transform = 'scale(1)';
+        element.style.transition = 'transform 0.3s ease';
+    });
 }
 
 function prevPage() {
@@ -101,6 +119,8 @@ function searchProducts() {
                 <a href="../views/details.html?=${product.id}" class="text-orange-500 hover:underline">View Details</a>
             `;
             productContainer.appendChild(productElement);
+            // Apply hover animation
+            addHoverAnimation(productElement);
         });
     })
     .catch(error => {
@@ -126,8 +146,13 @@ function filterProducts(number) {
                 <a href="../views/details.html?=${products.id}" class="text-orange-500 hover:underline">View Details</a>
             `;
             productContainer.appendChild(productElement);
+            // Apply hover animation
+            addHoverAnimation(productElement);
         });
     })
+    .catch(error => {
+        console.error('Error fetching products:', error);
+    });
 }
 
 displayProducts();
