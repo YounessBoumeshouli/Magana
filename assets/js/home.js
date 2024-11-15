@@ -45,7 +45,7 @@ function ShowBrand(){
    
   )
   
-// }
+}
 // ShowBrand()
 
 let HorizontalContainer = document.getElementById("ads");
