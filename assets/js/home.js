@@ -11,7 +11,7 @@ if (window.location.pathname === '/wrong-url') {
 }
 
 function showSlides(slideIndex) {
-fetch("http://localhost:7000/categories")
+fetch("http://localhost:3000/categories")
 .then(res=>res.json())
 .then(res=>
 
@@ -46,7 +46,7 @@ function ShowBrand(){
   )
   
 }
-// ShowBrand()
+ShowBrand()
 
 let HorizontalContainer = document.getElementById("ads");
 
@@ -63,6 +63,7 @@ box.push()
 
 function dataHome(res){
   document.getElementById("BrandsContainer").classList.add("flex")
+  let modals = document.getElementById("PopularModals")
   document.getElementById("BrandsContainer").innerHTML=`
 
   <img src="./assets/images/Brand/${res[0].brands.brand1}">
@@ -74,7 +75,7 @@ function dataHome(res){
 document.getElementById("news").innerHTML = `
   <!-- Left side featured news item (occupies 2 columns on large screens) -->
   <div class="col-span-1 lg:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-    <img src="./assets/images/Home-images/${res[0].news.news3.image}" class="w-full h-80 object-cover rounded-lg border-4 border-blue-500">
+    <img src="./assets/images/Home-images/${res[0].news.news3.image}" class="w-full h-full object-cover rounded-lg border-4 ">
     <div class="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg">
       <p class="text-sm text-gray-500">${res[0].news.news3.date}</p>
       <h2 class="text-2xl font-bold">${res[0].news.news3.title}</h2>
@@ -110,17 +111,49 @@ document.getElementById("news").innerHTML = `
 `;
 
 
-  
+modals.innerHTML = `
+      <div class="grid grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
+        <!-- Top left image with text -->
+        <div class="flex items-center justify-between  bg-red-200 rounded-lg shadow-lg p-8">
+          <div class="text-left">
+            <p class="text-sm text-orange-500 font-semibold">Classic Fussional Essenial</p>
+            <h2 class="text-2xl font-bold text-gray-800">Classical Watch</h2>
+            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">Shop Now</a>
+          </div>
+          <img src="./assets/images/Product/${res[0].Modals.modal}" class="w-40 h-auto object-contain" alt="Watch">
+        </div>
+    
+        <!-- Top right image with text -->
+        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8">
+          <div class="text-left">
+            <p class="text-sm text-orange-500 font-semibold">From $500</p>
+            <h2 class="text-2xl font-bold text-gray-800">Watches for her</h2>
+            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
+          </div>
+          <img src="./assets/images/Product/${res[0].Modals.modal2}" class="w-40 h-auto object-contain" alt="Watch">
+        </div>
+    
+        <!-- Bottom centered image with text -->
+        <div class="col-span-2 flex items-center w-full justify-between bg-gray-50 rounded-lg shadow-lg p-8 mx-auto">
+          <div class="text-left">
+            <p class="text-sm text-orange-500 font-semibold">From $500</p>
+            <h2 class="text-2xl font-bold text-gray-800">Watches for both</h2>
+            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block"> Explore now </a>
+          </div>
+          <img src="./assets/images/Product/${res[0].Modals.modal3}" class="w-40 h-auto object-contain" alt="Watch">
+        </div>
+      </div>
+    `
 
   document.getElementById("ads").innerHTML = `
 
 
           
-        <div class="w-full mx-auto  text-center bg-black flex-none">
-            <img src="./assets/images/Ads/cover3.jpg" class="h-full">
+        <div class="w-full mx-auto  text-center  flex-none">
+            <img src="./assets/images/Ads/cover.png" class="h-full">
         </div>
-        <div class="bg-red-100 w-full flex-none">
-                  <img src="./assets/images/Ads/cover2.jpg"class="w-full">
+        <div class="w-full flex-none">
+                  <img src="./assets/images/Ads/${res[0].Ads.Ad2}"class="w-full">
         </div>
 
 
@@ -132,6 +165,7 @@ document.getElementById("news").innerHTML = `
 }
 function showMAx(res){
   let Container = document.getElementById("best-sellers")
+  
       res.forEach(category => {
         
         category.products.forEach(produit => { 
@@ -194,7 +228,7 @@ function showMAx(res){
 
 function ShowPopularWatches(){
   
-  fetch("http://localhost:7000/categories")
+  fetch("http://localhost:3000/categories")
   .then(res=>res.json())
   .then(res=>
 
