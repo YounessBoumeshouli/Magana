@@ -49,7 +49,7 @@ document.getElementById('dt-add-to-cart').addEventListener('click',function(){
 // console.log(id)
 
 
-    fetch("http://localhost:4000/categories")
+    fetch("http://localhost:3000/categories")
         .then(res => res.json())
         .then(res =>
             res.forEach(category => {
