@@ -34,7 +34,8 @@ document.addEventListener('click', (e) => {
         
 })
 
-let id = location.href.split("?")[1].split("=")[1]
+let id = location.href.split("=")[1]
+
 document.getElementById('dt-add-to-cart').addEventListener('click',function(){
             let toCart = {
                 id : id ,
@@ -43,7 +44,8 @@ document.getElementById('dt-add-to-cart').addEventListener('click',function(){
             let cart = JSON.parse(localStorage.getItem('ordreToCard')) || [];
             cart.push(toCart);
             localStorage.setItem('ordreToCard', JSON.stringify(cart));
-        })
+            addToCart.href = `/views/panier.html`;  
+              })
 // console.log(id)
 
 

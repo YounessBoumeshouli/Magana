@@ -30,6 +30,9 @@ let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
 var panairid =document.getElementById("panier1");
 var page =document.getElementById("page1");
 // console.log(panairid);
+
+
+
 function afiche(){
 panairid.innerHTML="";
 page.innerHTML="";
@@ -64,7 +67,6 @@ panairid.innerHTML+=`
                 </div>
             </div>
 `;
-
 page.innerHTML+=`
 <article class="flex flex-col  md:flex-row justify-center items-center  md:w-11/12 w-full mb-1">
             <div class="w-11/12 border-2 h-14 md:h-32 md:justify-center md:w-3/12 flex  items-center">
@@ -133,6 +135,9 @@ document.getElementById("cartTotals").innerHTML=""
 }
 
 }
+
+
+
 function carte(index){
     document.getElementById("cartTotals").innerHTML=`
 <h1 class="text-4xl font-serif "> Cart totals </h1>
