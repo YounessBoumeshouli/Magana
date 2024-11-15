@@ -14,7 +14,7 @@ async function afiche(){
 panairid.innerHTML="";
 page.innerHTML="";
 document.getElementById('numbrecom').innerText=Mypanier.length;
-fetch("http://localhost:3000/categories")
+fetch("../assets/js/data.json")
 .then(res => res.json())
 .then(res =>
     res.forEach(category => {
@@ -135,7 +135,7 @@ Mypanier.forEach(produit=>{
 var sub = 0;
 async function subtotal() {
    var  sub=0;
-    const response = await fetch("http://localhost:3000/categories");
+    const response = await fetch("../assets/js/data.json");
     const categories = await response.json();
     Mypanier.forEach(produitlo => {
     categories.forEach(category => {
