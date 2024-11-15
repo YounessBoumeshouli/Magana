@@ -1,13 +1,11 @@
-function fermepanier(){
-    document.getElementById('panierid').classList.add("hidden")
+function fermepanier(){  
+document.getElementById('panierid').style.display="none";
 }
-// id : Date.now()"id": 1,
+fermepanier(); 
 var listee=document.getElementsByClassName("mod");
-var opje={};
-opje1={id:1,image:"./../assets/images/Product/FossilMen.jpg",title: "Fossil Men's Grant Chronograph Leather Watch",price: 129.95,quantity:2}
-opje2={id: 17,image: "./../assets/images/Product/FossilWomen.jpg",title: "Fossil Women's Jacqueline Leather Watch",price: 109.99,quantity:1}
-opje3={id: 18,image: "./../assets/images/Product/Omega.jpg", title: "Omega Seamaster Diver 300M",price: 5200,quantity:3}
-
+let opje1={id:1,image:"./../assets/images/Product/FossilMen.jpg",title: "Fossil Men's Grant Chronograph Leather Watch",price: 129.95,quantity:2}
+let opje2={id: 17,image: "./../assets/images/Product/FossilWomen.jpg",title: "Fossil Women's Jacqueline Leather Watch",price: 109.99,quantity:1}
+let opje3={id: 18,image: "./../assets/images/Product/Omega.jpg", title: "Omega Seamaster Diver 300M",price: 5200,quantity:3}
 let Mypanier = JSON.parse(localStorage.getItem('panier')) || [];
 console.log(Mypanier);
 var id=0;
@@ -76,9 +74,9 @@ page.innerHTML+=`
                 <lable class="ml-3 text-lg font-serif md:hidden"> subtotal : </lable>
                 <p class="mr-3 ">$${(produit.quantity*produit.price).toFixed(2)}</p>
             </div>
-        </article>
-
+        </article> 
 `;
+document.getElementById("numbrecom").textContent=Mypanier.length;
 });
 
 if(Mypanier.length>0)
@@ -105,8 +103,7 @@ carte(localStorage.getItem("coupon"));
 else{
 page.innerHTML=`<h1 class="mt-12"> Your cart is currently empty</h1>
                 <a class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md mt-8 text-center" href="catalogue.html"> shoop </a>
-`;
-
+`; 
 document.getElementById('panier1button').innerHTML=`<h1 class="mt-12"> Your cart is currently empty</h1>`  ;
 document.getElementById("cartTotals").innerHTML=""
 }
@@ -189,8 +186,7 @@ function coupon(){
     carte(localStorage.getItem("coupon"));
 }
 
-}
-
+} 
 function ubdate(){
     for(let i= 0 ;i<Mypanier.length;i++){
     var quantity ="quantity"+Mypanier[i].id;
@@ -217,4 +213,17 @@ function suprimepainer(index){
     afiche();
     console.log(Mypanier);
 }
-}
+} 
+ bdocument.getElementById('logopanier').addEventListener('click',function(){
+
+    // console.log(document.getElementById('panierid'));
+    // if(document.getElementById('panierid').style.display=="flex")
+        document.getElementById('panierid').style.display="flex";
+    // else
+    //  document.getElementById('panierid').style.display="flex";
+     console.log("hi");
+// console.log(document.getElementById('panierid').remove('hidden'));
+// 
+//     
+});
+console.log(document.getElementById('logopanier'));
