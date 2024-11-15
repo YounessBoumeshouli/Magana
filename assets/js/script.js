@@ -19,7 +19,7 @@ function displayProducts() {
     const productContainer2 = document.getElementById('product-list2');
     productContainer.innerHTML = '';
 
-    fetch("../assets/js/data.json")
+    fetch("http://localhost:3000/categories")
     .then(res => res.json())
     .then(res => {
         let i = 0;
@@ -94,7 +94,7 @@ function searchProducts() {
     const productContainer = document.getElementById('product-list');
     productContainer.innerHTML = '';
 
-    fetch("../assets/js/data.json")
+    fetch("http://localhost:3000/categories")
     .then(res => res.json())
     .then(res => {
         let filteredProducts = [];
@@ -132,7 +132,7 @@ function filterProducts(number) {
     const productContainer = document.getElementById('product-list');
     productContainer.innerHTML = '';
 
-    fetch("../assets/js/data.json")
+    fetch("http://localhost:3000/categories")
     .then(res => res.json())
     .then(res => {
         res[number].products.forEach(products => {

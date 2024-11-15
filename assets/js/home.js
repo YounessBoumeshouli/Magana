@@ -11,7 +11,7 @@ if (window.location.pathname === '/wrong-url') {
 }
 
 function showSlides(slideIndex) {
-fetch("../assets/js/data.json")
+fetch("http://localhost:7000/categories")
 .then(res=>res.json())
 .then(res=>
 
@@ -37,7 +37,7 @@ fetch("../assets/js/data.json")
 
 function ShowBrand(){
   document.getElementById("BrandsContainer").innerHTML=""
-  fetch("./assets/js/brand.json")
+  fetch("http://localhost:2000/DATA")
   .then(res=>res.json())
   .then(res=>
     dataHome(res)
@@ -228,7 +228,7 @@ function showMAx(res){
 
 function ShowPopularWatches(){
   
-  fetch("../assets/js/data.json")
+  fetch("http://localhost:3000/categories")
   .then(res=>res.json())
   .then(res=>
 
