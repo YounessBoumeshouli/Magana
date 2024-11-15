@@ -1,6 +1,7 @@
 function fermepanier(){
     document.getElementById('panierid').classList.add("hidden")
 }
+fermepanier();
 // id : Date.now()"id": 1,
 var listee=document.getElementsByClassName("mod");
 
@@ -224,8 +225,9 @@ function suprimepainer(index){
 }
 }
 var logo =document.getElementById('logoPanier');
+
 console.log(logo);
 logo.onclick= function(){
-    console.log("en click");
+    if(document.getElementById('panierid').style.display == "felx")
+        document.getElementById('panierid').classList.add("hidden")
 }
-;
