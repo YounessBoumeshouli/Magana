@@ -114,6 +114,9 @@ document.getElementById("cartTotals").innerHTML=""
 }
 
 }
+
+
+
 function carte(index){
     document.getElementById("cartTotals").innerHTML=`
 <h1 class="text-4xl font-serif "> Cart totals </h1>
