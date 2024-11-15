@@ -98,7 +98,7 @@ function searchProducts() {
                 <h2 class="text-xl font-bold">${product.title}</h2>
                 <p class="text-gray-700">$${product.price}</p>
                 <p class="text-gray-500 mb-4">${product.description}</p>
-                <a href="product.html?id=${product.id}" class="text-orange-500 hover:underline">View Details</a>
+                <a href="../views/details.html?=${product.id}" class="text-orange-500 hover:underline">View Details</a>
             `;
             productContainer.appendChild(productElement);
         });
@@ -123,7 +123,7 @@ function filterProducts(number) {
                 <h2 class="text-xl font-bold">${products.title}</h2>
                 <p class="text-gray-700">$${products.price}</p>
                 <p class="text-gray-500 mb-4">${products.description}</p>
-                <a href="product.html?id=${products.id}" class="text-orange-500 hover:underline">View Details</a>
+                <a href="../views/details.html?=${products.id}" class="text-orange-500 hover:underline">View Details</a>
             `;
             productContainer.appendChild(productElement);
         });
