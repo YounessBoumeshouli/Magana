@@ -14,34 +14,7 @@ let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
 var panairid =document.getElementById("panier1");
 var page =document.getElementById("page1");
 
-function  table (){
-    if(Mypanier.length>0){
-        page.innerHTML+=`
-        
-                                     <article class="flex flex-col  md:flex-row justify-center items-center  md:w-11/12 w-full mb-1">
-                                        <div class="w-11/12 border-2 h-14 md:h-32 md:justify-center md:w-3/12 flex  items-center"> 
-                                        </div>
-                                        <div class="w-96  border-2 h-14 md:h-32 justify-center items-center md:border-l-0 md:flex hidden">
-                                        </div>
-                                        <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-l-0 md:border-r-0 md:h-32  md:justify-center">
-                                            <lable class="ml-3 text-lg font-serif md:hidden "> Product :  </lable>
-                                        </div>
-                                        <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-r-0 md:justify-center md:w-8/12 md:h-32">
-                                            <lable class="ml-3 text-lg font-serif md:hidden"> Price : </lable>
-                                            </div>
-                                        <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-r-0 md:justify-center md:h-32 ">
-                                            <label class="ml-3 font-serif text-lg md:hidden"> Quantity :</label>
-                                            
-                                        </div>
-                                        <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:justify-center md:w-8/12 md:h-32">
-                                            <lable class="ml-3 text-lg font-serif md:hidden"> subtotal : </lable>
-                                            </div>
-                                    </article>
-    
-        `;
-        console.loge( page);
-    }
-} 
+
  
 page.innerHTML=`
         
@@ -141,7 +114,7 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
                     </article>`;
             document.getElementById('panier1button').innerHTML=`
                             <div class="flex flex-row justify-between w-full text-white">
-                                <button class="bg-orange-500 w-20 ml-3 rounded-xl h-8 on" onclick="panier.html">View cart </button>
+                                <button class="bg-orange-500 w-20 ml-3 rounded-xl h-8 on" onclick="pagePanier()">View cart </button>
                                 <button class="bg-orange-500 mr-3 w-20 rounded-xl">Checkout</button>
                             </div>
             `  ;
@@ -163,7 +136,9 @@ function carte(numbre){
     coupon();
 }
 afiche();
-
+function pagePanier(){
+    window.location.href = "panier.html";
+}
 function incrimet(index){	
     Mypanier.forEach(produit=>{
     var quantity ="quantity"+produit.id;
@@ -217,24 +192,7 @@ async function subtotal() {
     }
     
 }
-
-
-// let obj =JSON.parse(localStorage.getItem('coupon'))||[];
-// if (obj.length == 0) {
-
-// var cup ={numbr:0,total:0.0};
-// obj.push(cup);
-// localStorage.setItem("coupon",JSON.stringify(obj));
-
-// }
-// if(obj[0].numbr == 0){
-
-
-    
-//     obj[0].total = localStorage.getItem('sub'); 
-//     console.log(document.getElementById('Subtotalprice'));
-//     localStorage.setItem("coupon",JSON.stringify(obj));
-// }
+ 
 function coupon(){
     console.log('copun');
     if(!(localStorage.getItem('coupon'))){
