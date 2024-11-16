@@ -201,7 +201,7 @@ function coupon(){
         localStorage.setItem('coupon',cop);
     }
     }
-    Location.reload();
+    location.reload();
 }
 
 function ubdate(){
