@@ -11,7 +11,7 @@ if (window.location.pathname === '/wrong-url') {
 }
 
 function showSlides(slideIndex) {
-fetch("http://localhost:7000/categories")
+fetch("http://localhost:3000/categories")
 .then(res=>res.json())
 .then(res=>
 
@@ -228,7 +228,7 @@ function showMAx(res){
 
 function ShowPopularWatches(){
   
-  fetch("http://localhost:7000/categories")
+  fetch("http://localhost:3000/categories")
   .then(res=>res.json())
   .then(res=>
 
