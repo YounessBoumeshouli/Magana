@@ -56,10 +56,10 @@ fetch("http://localhost:3000/categories")
 
 function ShowBrand(){
   document.getElementById("BrandsContainer").innerHTML=""
-  fetch("http://localhost:2000/DATA")
+  fetch("https://younessboumeshouli.github.io/MaganaBrandsAPI/brand.json")
   .then(res=>res.json())
   .then(res=>
-    dataHome(res)
+    dataHome(res.DATA)
     
    
   )
