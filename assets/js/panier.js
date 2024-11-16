@@ -317,7 +317,7 @@ form.addEventListener('submit', (e) => {
             dat: (Date.now()).toString()
         };
 
-        localStorage.clear();
+        
         localStorage.setItem('deviesValide', JSON.stringify(devi));
         window.location.href = "devis.html";
     }
