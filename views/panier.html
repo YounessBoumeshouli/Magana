@@ -22,11 +22,11 @@
 		  <nav class="hidden md:flex space-x-8">
 			<a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
 			<a href="#" class="text-gray-800 hover:text-gray-600">Catalogue</a>
-			<a href="#" class="text-gray-800 hover:text-gray-600">Détails</a>
+			<a href="#" class="text-gray-800 hover:text-gray-600">Détail</a>
 			<a href="#" class="text-gray-800 hover:text-gray-600">About</a>
 			<a href="#" class="text-orange-500 text-2xl">
 				<p class="text-green-400 rounded-md  " id ="numbrecom">2</p>
-			  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6" id="logopanier">
+			  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6" onclick="fermepanier()" id ="logoPanier" >
 			  
 			</a>  
 		  </nav>
@@ -104,7 +104,7 @@
 		
 		<p id="message"></p>
 		
-		<section class="w-80 h-lvh bg-white fixed right-0 top-0  flex flex-col items-center" 
+		<section class="w-80 h-lvh bg-white fixed right-0 top-0  flex flex-col items-center hidden" 
 		id="panierid">
 			<div class="flex justify-between w-11/12 mt-2   h-14 items-center">
 				<label> Shopping cart</label>
@@ -131,7 +131,7 @@
 				  <tbody class="border-2">
 				    <tr class="border-2">
 				      <td class="w-8/12">Subtotal</td>
-				      <td id="Subtotalprice">$3333</td>
+				      <td id="Subtotalprice"></td>
 				      
 				    </tr>
 				    <tr class="border-2">
@@ -140,7 +140,7 @@
 				    </tr>
 				    <tr>
 				      <td>Total</td>
-				      <td id="totalprice">$333</td>
+				      <td id="totalprice"></td>
 				    </tr>
 				  </tbody>
 				</table>
@@ -171,3 +171,5 @@
 </body>
 
 <html>
+
+
