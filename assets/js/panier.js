@@ -279,13 +279,17 @@ const rib2 = document.getElementById('cardNumber');
 const expirationDate2 = document.getElementById('expirationDate');
 const cvv2 = document.getElementById('cvv');
 const form = document.getElementById('checkoutForm');
- 
+const city2 = document.getElementById('cityid');
+const adrice2 = document.getElementById('adriceid');
+
 const paymentObjet = {
     name: /^[a-zA-Z\s]{6,20}$/, 
-    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 
+    email: /^[a-zA-Z\d._%+-]+@gmail\.com$/, 
     rib: /^[0-9]{16}$/, 
     expirationDate: /^(0[1-9]|1[0-2])\/\d{2}$/,
-    cvv: /^[0-9]{3}$/, 
+    cvv: /^[0-9]{3}$/,
+    city: /^[a-zA-Z\s]{3,15}$/,
+    adrice: /^[a-zA-Z0-9\s,-]{8,20}$/
 };
 
 form.addEventListener('submit', (e) => {
@@ -293,30 +297,49 @@ form.addEventListener('submit', (e) => {
 
     let valid = true;
 
+    // Validate fields
     if (paymentObjet.name.test(name2.value.trim())) {
         name2.style.border = "solid 2px green";
     } else {
         name2.style.border = "solid 2px red";
         valid = false;
     }
+
+    if (paymentObjet.city.test(city2.value.trim())) {
+        city2.style.border = "solid 2px green";
+    } else {
+        city2.style.border = "solid 2px red";
+        valid = false;
+    }
+
+    if (paymentObjet.adrice.test(adrice2.value.trim())) {
+        adrice2.style.border = "solid 2px green";
+    } else {
+        adrice2.style.border = "solid 2px red";
+        valid = false;
+    }
+
     if (paymentObjet.email.test(email2.value.trim())) {
         email2.style.border = "solid 2px green";
     } else {
         email2.style.border = "solid 2px red";
         valid = false;
     }
+
     if (paymentObjet.rib.test(rib2.value.trim())) {
         rib2.style.border = "solid 2px green";
     } else {
         rib2.style.border = "solid 2px red";
         valid = false;
     }
+
     if (paymentObjet.expirationDate.test(expirationDate2.value.trim())) {
         expirationDate2.style.border = "solid 2px green";
     } else {
         expirationDate2.style.border = "solid 2px red";
         valid = false;
     }
+
     if (paymentObjet.cvv.test(cvv2.value.trim())) {
         cvv2.style.border = "solid 2px green";
     } else {
@@ -325,9 +348,12 @@ form.addEventListener('submit', (e) => {
     }
 
     if (valid) {
-    let listedevies=JSON.parse(localStorage.getItem('deviesValide')) || [];
-    
-    // let obj{name: ,email: ,}
-    // listedevies.push()
+        const devi = {
+      
+        };
+        let listedevies = JSON.parse(localStorage.getItem('deviesValide')) || [];
+        listedevies.push(devi);
+        localStorage.setItem('deviesValide', JSON.stringify(listedevies));
     }
 });
+
