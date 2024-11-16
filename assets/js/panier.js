@@ -44,7 +44,7 @@ page.innerHTML=`
 `;
 async function afiche(){
 panairid.innerHTML="";
-// table();
+
 document.getElementById('numbrecom').innerText=Mypanier.length;
     const response = await fetch("http://localhost:3000/categories");
     const categories = await response.json();
@@ -83,7 +83,7 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
                                         <label class="ml-3 font-serif text-lg md:hidden"> Quantity :</label>
                                         <div  class="flex  lg:mr-0 md:mr-0 mr-8  "> 
                                             <button class="border-2 w-10 h-10 " onclick="incrimet(${produitlo.id})">+</button>
-                                            <input type="number" class="w-10 border-2 border-l-0 border-r-0 text-center" value="${produitlo.quantite}" id="quantity${produitlo.id}">
+                                            <input type="text" class="w-10 border-2 border-l-0 border-r-0 text-center" value="${produitlo.quantite}" id="quantity${produitlo.id}">
                                             <button class="w-10 border-2" onclick="descrimet(${produitlo.id})">-</button>
                                         </div>
                                     </div>
@@ -131,8 +131,8 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
 }     
 function carte(numbre){
     numbre = (+numbre).toFixed(2);
-    document.getElementById('Subtotalprice').innerText=numbre;
-    document.getElementById('totalprice').innerText=numbre;
+    document.getElementById('Subtotalprice').innerText=(numbre).toFixed(4);
+    document.getElementById('totalprice').innerText=(numbre).toFixed(4);
     coupon();
 }
 afiche();
@@ -182,12 +182,12 @@ async function subtotal() {
 
     });
 
-    document.getElementById('Subtotalprice').innerText = sub;
-    document.getElementById('totalprice').innerText=sub;
+    document.getElementById('Subtotalprice').innerText = (sub).toFixed(4);
+    document.getElementById('totalprice').innerText=(sub).toFixed(4);
     localStorage.setItem("sub",sub);
     if(localStorage.getItem('coupon')){
         
-    document.getElementById('Subtotalprice').innerText =localStorage.getItem('coupon');
+    document.getElementById('Subtotalprice').innerText = localStorage.getItem('coupon');
     document.getElementById('totalprice').innerText=localStorage.getItem('coupon');
     }
     
@@ -319,7 +319,7 @@ form.addEventListener('submit', (e) => {
 
         localStorage.clear();
         localStorage.setItem('deviesValide', JSON.stringify(devi));
-        window.location.href = "devies.html";
+        window.location.href = "devis.html";
     }
      else {
         // console.log("erore");
