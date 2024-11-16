@@ -5,10 +5,29 @@ showSlides(slideIndex);
 //   showSlides(slideIndex += n);
 // }
 
-if (window.location.pathname === '/wrong-url') {
-  // Redirect to the correct URL
-  window.location.replace('https://google.com');
-}
+// if (window.location.pathname === '/wrong-url') {
+//   // Redirect to the correct URL
+//   window.location.replace('https://google.com');
+// }
+let img1  = document.getElementById("img1")
+let HeaderContainer  = document.getElementById("HeaderContainer")
+HeaderContainer.addEventListener('mousemove', function yo(u) {
+      img1.className = "";
+  console.log(u.clientX,u.clientY);
+  let bottomImg = (u.clientY - 76)/6
+  let rightImg = (u.clientX - 411)/6
+  img1.classList.add("relative")
+  let className = `bottom-[${bottomImg}px]`
+  img1.classList.add(className)
+  let className2 = `right-[${rightImg}px]`
+  img1.classList.add(className2)
+
+});
+HeaderContainer.addEventListener('mouseover', function yo(u) {
+  img1.className = "";
+
+})
+
 
 function showSlides(slideIndex) {
 fetch("http://localhost:3000/categories")
