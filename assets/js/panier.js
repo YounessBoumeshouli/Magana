@@ -314,7 +314,7 @@ form.addEventListener('submit', (e) => {
             adrice: adrice2.value.trim(),
             coupon: localStorage.getItem('coupon') || "",
             subtotal: localStorage.getItem('sub') || "",
-            dat: Date.now()
+            dat: (Date.now()).toString()
         };
 
         localStorage.clear();
@@ -325,4 +325,5 @@ form.addEventListener('submit', (e) => {
         // console.log("erore");
     }
 });
+console.log((Date.now()).toString())
 
