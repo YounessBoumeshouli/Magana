@@ -319,7 +319,7 @@ form.addEventListener('submit', (e) => {
 
         localStorage.clear();
         localStorage.setItem('deviesValide', JSON.stringify(devi));
-        window.location.href = "devies.html";
+        window.location.href = "devis.html";
     }
      else {
         // console.log("erore");
