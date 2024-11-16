@@ -61,9 +61,8 @@ document.getElementById('dt-add-to-cart').addEventListener('click', function (e)
 
 
 
-    // addToCart.href = `/views/panier.html`;
+    addToCart.href = `/views/panier.html`;
 })
-// console.log(id)
 
 
 fetch("http://localhost:4000/categories")
