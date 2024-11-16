@@ -273,4 +273,61 @@ function payment(){
     document.querySelector('footer').classList.add("hidden");
     document.querySelector('header').classList.add("hidden");
 }
+const name2 = document.getElementById('nameid');
+const email2 = document.getElementById('emailid');
+const rib2 = document.getElementById('cardNumber');
+const expirationDate2 = document.getElementById('expirationDate');
+const cvv2 = document.getElementById('cvv');
+const form = document.getElementById('checkoutForm');
+ 
+const paymentObjet = {
+    name: /^[a-zA-Z\s]{6,20}$/, 
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 
+    rib: /^[0-9]{16}$/, 
+    expirationDate: /^(0[1-9]|1[0-2])\/\d{2}$/,
+    cvv: /^[0-9]{3}$/, 
+};
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let valid = true;
+
+    if (paymentObjet.name.test(name2.value.trim())) {
+        name2.style.border = "solid 2px green";
+    } else {
+        name2.style.border = "solid 2px red";
+        valid = false;
+    }
+    if (paymentObjet.email.test(email2.value.trim())) {
+        email2.style.border = "solid 2px green";
+    } else {
+        email2.style.border = "solid 2px red";
+        valid = false;
+    }
+    if (paymentObjet.rib.test(rib2.value.trim())) {
+        rib2.style.border = "solid 2px green";
+    } else {
+        rib2.style.border = "solid 2px red";
+        valid = false;
+    }
+    if (paymentObjet.expirationDate.test(expirationDate2.value.trim())) {
+        expirationDate2.style.border = "solid 2px green";
+    } else {
+        expirationDate2.style.border = "solid 2px red";
+        valid = false;
+    }
+    if (paymentObjet.cvv.test(cvv2.value.trim())) {
+        cvv2.style.border = "solid 2px green";
+    } else {
+        cvv2.style.border = "solid 2px red";
+        valid = false;
+    }
+
+    if (valid) {
+    let listedevies=JSON.parse(localStorage.getItem('deviesValide')) || [];
+    
+    // let obj{name: ,email: ,}
+    // listedevies.push()
+    }
+});
