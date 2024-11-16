@@ -55,10 +55,10 @@ document.getElementById('dt-add-to-cart').addEventListener('click', function (e)
 })
 
 
-    fetch("http://localhost:3000/categories")
+    fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
         .then(res => res.json())
         .then(res =>
-            res.forEach(category => {
+            res.categories.forEach(category => {
 
             category.products.forEach(product => {
 

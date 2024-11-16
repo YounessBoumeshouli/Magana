@@ -30,20 +30,20 @@ HeaderContainer.addEventListener('mouseout', function yo(u) {
 
 
 function showSlides(slideIndex) {
-fetch("http://localhost:3000/categories")
+fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
 .then(res=>res.json())
 .then(res=>
 
   document.getElementById("CategoriesContainer").innerHTML = `
   <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
     <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md">
+      <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md">
     </div>
     <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res[slideIndex].products[0].image}" class="w-56 h-56 object-cover rounded-md">
+      <img src="./assets/images/Product/${res.categories[slideIndex].products[0].image}" class="w-56 h-56 object-cover rounded-md">
     </div>
     <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res[slideIndex+1].products[0].image}" class="w-56 h-56 object-cover rounded-md">
+      <img src="./assets/images/Product/${res.categories[slideIndex+1].products[0].image}" class="w-56 h-56 object-cover rounded-md">
     </div>
   </div>
 `
@@ -185,7 +185,7 @@ modals.innerHTML = `
 function showMAx(res){
   let Container = document.getElementById("best-sellers")
   
-      res.forEach(category => {
+      res.categories.forEach(category => {
         
         category.products.forEach(produit => { 
 
@@ -247,7 +247,7 @@ function showMAx(res){
 
 function ShowPopularWatches(){
   
-  fetch("http://localhost:3000/categories")
+  fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
   .then(res=>res.json())
   .then(res=>
 
