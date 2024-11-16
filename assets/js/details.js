@@ -1,12 +1,4 @@
 
-// let imgs = document.querySelectorAll('.dt-small-images');
-// let mainImg = document.getElementById('dt-main-image');
-
-// imgs.forEach(function (item) {
-//     item.addEventListener('click', function () {
-//         mainImg.src = this.src
-//     })
-// });
 
 
 let decBtn = document.getElementById('dt-decrease-quantity');
@@ -58,8 +50,6 @@ document.getElementById('dt-add-to-cart').addEventListener('click', function (e)
         // cart[index].quantite =toCart.quantite;
     }
     localStorage.setItem('ordreToCard', JSON.stringify(cart));
-
-
 
     addToCart.href = `/views/panier.html`;
 })
@@ -114,7 +104,6 @@ function showRating(nb) {
                           </svg>
                         `
     }
-
 }
 
 
