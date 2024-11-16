@@ -129,7 +129,11 @@ function searchProducts() {
 }
 
 function filterProducts(number) {
+    
     const productContainer = document.getElementById('product-list');
+    const productContainer2 = document.getElementById('product-list2');
+    productContainer.classList.remove("hidden");
+    productContainer2.classList.add("hidden");
     productContainer.innerHTML = '';
 
     fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
