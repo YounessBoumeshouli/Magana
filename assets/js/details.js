@@ -29,7 +29,7 @@ document.addEventListener('click', (e) => {
 let id = location.href.split("=")[1]
 
 document.getElementById('dt-add-to-cart').addEventListener('click', function (e) {
-    e.preventDefault()
+    // e.preventDefault()
     let toCart = {
         id: id,
         quantite: document.getElementById('dt-quantity').value,
@@ -51,7 +51,7 @@ document.getElementById('dt-add-to-cart').addEventListener('click', function (e)
     }
     localStorage.setItem('ordreToCard', JSON.stringify(cart));
 
-    addToCart.href = `/views/panier.html`;
+    // addToCart.href = `/views/panier.html`;
 })
 
 
