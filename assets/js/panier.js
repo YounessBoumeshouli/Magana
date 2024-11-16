@@ -130,6 +130,7 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
             if(Mypanier.length>0)
             {
                
+            subtotal();
             page.innerHTML+=`
             <article class="border-2 h-14 w-11/12   md:ml-0   mt-0 flex justify-between "> 
                         <div>
@@ -144,10 +145,7 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
                                 <button class="bg-orange-500 mr-3 w-20 rounded-xl">Checkout</button>
                             </div>
             `  ;
-            if(localStorage.getItem("coupon")==null)
-                carte((somme()).toFixed(2));
-            else
-                carte(localStorage.getItem("coupon"));
+
             }
             else{
                 page.innerHTML=`<h1 class="mt-12"> Your cart is currently empty</h1>
@@ -156,7 +154,6 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
                 document.getElementById('panier1button').innerHTML=`<h1 class="mt-12"> Your cart is currently empty</h1>`  ;
                 document.getElementById("cartTotals").innerHTML=""
             }
-            subtotal();
             
 }     
 function carte(numbre){
@@ -213,36 +210,40 @@ async function subtotal() {
     document.getElementById('Subtotalprice').innerText = sub;
     document.getElementById('totalprice').innerText=sub;
     localStorage.setItem("sub",sub);
+    if(localStorage.getItem('coupon')){
+        
+    document.getElementById('Subtotalprice').innerText =localStorage.getItem('coupon');
+    document.getElementById('totalprice').innerText=localStorage.getItem('coupon');
+    }
     
 }
 
 
-let obj =JSON.parse(localStorage.getItem('coupon'))||[];
-if (obj.length == 0) {
+// let obj =JSON.parse(localStorage.getItem('coupon'))||[];
+// if (obj.length == 0) {
 
-var cup ={numbr:0,total:0.0};
-obj.push(cup);
-localStorage.setItem("coupon",JSON.stringify(obj));
+// var cup ={numbr:0,total:0.0};
+// obj.push(cup);
+// localStorage.setItem("coupon",JSON.stringify(obj));
 
-}
-if(obj[0].numbr == 0){
+// }
+// if(obj[0].numbr == 0){
 
 
     
-    obj[0].total = localStorage.getItem('sub'); 
-    console.log(document.getElementById('Subtotalprice'));
-    localStorage.setItem("coupon",JSON.stringify(obj));
-}
+//     obj[0].total = localStorage.getItem('sub'); 
+//     console.log(document.getElementById('Subtotalprice'));
+//     localStorage.setItem("coupon",JSON.stringify(obj));
+// }
 function coupon(){
-   
-
-    if(obj[0].numbr == 0){
+    console.log('copun');
+    if(!(localStorage.getItem('coupon'))){
     if(document.getElementById("couponid").value == "09DD"){
-        obj[0].total = (sub*0.9).toFixed(2)    ;
-        obj[0].numbr = 1;
+       let cop = +localStorage.getItem('sub') * 0.9;
+        localStorage.setItem('coupon',cop);
     }
     }
-    localStorage.setItem("coupon",JSON.stringify(obj));
+    Location.reload();
 }
 
 function ubdate(){
@@ -348,12 +349,22 @@ form.addEventListener('submit', (e) => {
     }
 
     if (valid) {
-        const devi = {
-      
+        let devi = {
+            name: name2.value.trim(),
+            email: email2.value.trim(),
+            city: city2.value.trim(),
+            adrice: adrice2.value.trim(),
+            coupon: localStorage.getItem('coupon') || "",
+            subtotal: localStorage.getItem('sub') || "",
+            dat: Date.now()
         };
-        let listedevies = JSON.parse(localStorage.getItem('deviesValide')) || [];
-        listedevies.push(devi);
-        localStorage.setItem('deviesValide', JSON.stringify(listedevies));
+
+        localStorage.clear();
+        localStorage.setItem('deviesValide', JSON.stringify(devi));
+        window.location.href = "devies.html";
+    }
+     else {
+        // console.log("erore");
     }
 });
 
