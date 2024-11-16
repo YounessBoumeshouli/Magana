@@ -24,10 +24,10 @@
           "title": "Fossil Women's Jacqueline Leather Watch",
           "price": 109.99,
           "description": "A sophisticated leather strap watch with Roman numeral markers and a slim design, perfect for everyday wear.",
-          "image": "FossilWomen.jpg",
-          "image1": "FossilWomens.jpg",
-          "image2": "FossilWomens2.jpg",
-          "image3": "FossilWomens3.jpg",
+          "image": "FossilMen (1).png",
+          "image1": "FossilWomens.png",
+          "image2": "FossilWomens2.png",
+          "image3": "FossilMen (1).png",
           "rating": {
             "rate": 4.4,
             "count": 679
@@ -38,7 +38,11 @@
           "title": "Omega Seamaster Diver 300M",
           "price": 5200,
           "description": "A luxurious and iconic dive watch with a ceramic bezel, stainless steel case, and water resistance up to 300 meters.",
-          "image": "Omega.jpg",
+          "image": "Omega.png",
+          "image1": "Omega1.png",
+          "image2": "Omega2.png",
+          "image3": "Omega.png",
+
           "rating": {
             "rate": 4.8,
             "count": 150
@@ -414,7 +418,11 @@
           "title": "Portable Square",
           "price": 39.99,
           "description": "A casual, stylish, and affordable watch with an easy-to-read dial. Comfortable nylon strap and water-resistant.",
-          "image": "watch_3-1.png",
+          "image": "CasioMens.png",
+          "image1": "CasioMens1.png",
+          "image2": "CasioMens2.png",
+          "image3": "CasioMens3.png",
+
           "rating": {
             "rate": 3.8,
             "count": 430
