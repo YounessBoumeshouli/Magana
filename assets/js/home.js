@@ -23,7 +23,7 @@ HeaderContainer.addEventListener('mousemove', function yo(u) {
   img1.classList.add(className2)
 
 });
-HeaderContainer.addEventListener('mouseover', function yo(u) {
+HeaderContainer.addEventListener('mouseout', function yo(u) {
   img1.className = "";
 
 })
