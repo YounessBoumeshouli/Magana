@@ -30,7 +30,7 @@ HeaderContainer.addEventListener('mouseout', function yo(u) {
 
 
 function showSlides(slideIndex) {
-fetch("http://localhost:3000/categories")
+fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
 .then(res=>res.json())
 .then(res=>
 
@@ -247,7 +247,7 @@ function showMAx(res){
 
 function ShowPopularWatches(){
   
-  fetch("http://localhost:3000/categories")
+  fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
   .then(res=>res.json())
   .then(res=>
 

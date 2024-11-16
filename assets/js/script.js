@@ -19,11 +19,11 @@ function displayProducts() {
     const productContainer2 = document.getElementById('product-list2');
     productContainer.innerHTML = '';
 
-    fetch("http://localhost:3000/categories")
+    fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
     .then(res => res.json())
     .then(res => {
         let i = 0;
-        res.forEach(element => {
+        res.categories.forEach(element => {
             const productElement = document.createElement('div');
             const productElement2 = document.createElement('div');
             if (i < 6) {
@@ -94,12 +94,12 @@ function searchProducts() {
     const productContainer = document.getElementById('product-list');
     productContainer.innerHTML = '';
 
-    fetch("http://localhost:3000/categories")
+    fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
     .then(res => res.json())
     .then(res => {
         let filteredProducts = [];
         
-        res.forEach(element => {
+        res.categories.forEach(element => {
             const matchedProducts = element.products.filter(product => 
                 product.title.toLowerCase().includes(searchTerm) || 
                 product.description.toLowerCase().includes(searchTerm)
@@ -132,10 +132,10 @@ function filterProducts(number) {
     const productContainer = document.getElementById('product-list');
     productContainer.innerHTML = '';
 
-    fetch("http://localhost:3000/categories")
+    fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
     .then(res => res.json())
     .then(res => {
-        res[number].products.forEach(products => {
+        res.categories[number].products.forEach(products => {
             const productElement = document.createElement('div');
             productElement.classList.add('border', 'p-4', 'rounded-lg', 'shadow-md');
             productElement.innerHTML += `
