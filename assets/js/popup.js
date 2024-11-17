@@ -1,6 +1,6 @@
 let Mpanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
 var panairid =document.getElementById("panier1");
-var page =document.getElementById("page1");
+var page = document.getElementById("page1");
 function fermepanier(){
     if(document.getElementById('panierid').classList.contains('hidden')){
         document.getElementById('panierid').classList.remove("hidden");
