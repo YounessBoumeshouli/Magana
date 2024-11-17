@@ -175,15 +175,15 @@ function dataHome(res){
   let modals = document.getElementById("PopularModals")
   document.getElementById("BrandsContainer").innerHTML=`
 
-  <img src="./assets/images/Brand/${res[0].brands.brand1}">
-  <img src="./assets/images/Brand/${res[0].brands.brand2}">
-  <img src="./assets/images/Brand/${res[0].brands.brand3}">
-  <img src="./assets/images/Brand/${res[0].brands.brand4}">
-  <img src="./assets/images/Brand/${res[0].brands.brand5}">
+  <img src="./assets/images/Brand/${res[0].brands.brand1}"  class="max-w-[120px] w-full h-auto">
+  <img src="./assets/images/Brand/${res[0].brands.brand2}"  class="max-w-[120px] w-full h-auto">
+  <img src="./assets/images/Brand/${res[0].brands.brand3}"  class="max-w-[120px] w-full h-auto">
+  <img src="./assets/images/Brand/${res[0].brands.brand4}"  class="max-w-[120px] w-full h-auto">
+  <img src="./assets/images/Brand/${res[0].brands.brand5}"  class="max-w-[120px] w-full h-auto">
   `
 document.getElementById("news").innerHTML = `
   <!-- Left side featured news item (occupies 2 columns on large screens) -->
-  <div class="col-span-1 lg:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+  <div class="col-span-1 lg:col-span-2 relative bg-gray-100 rounded-lg overflow-hidden shadow-lg hidden md:block">
     <img src="./assets/images/Home-images/${res[0].news.news3.image}" class="w-full h-full object-cover rounded-lg border-4 ">
     <div class="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg">
       <p class="text-sm text-gray-500">${res[0].news.news3.date}</p>
@@ -221,7 +221,7 @@ document.getElementById("news").innerHTML = `
 
 
 modals.innerHTML = `
-      <div class="grid grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
+      <div class=" md:grid md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
         <!-- Top left image with text -->
         <div class="flex items-center justify-between  bg-red-200 rounded-lg shadow-lg p-8">
           <div class="text-left">
@@ -233,7 +233,7 @@ modals.innerHTML = `
         </div>
     
         <!-- Top right image with text -->
-        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8">
+        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8 hidden md:block lg:block">
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for her</h2>
@@ -243,7 +243,7 @@ modals.innerHTML = `
         </div>
     
         <!-- Bottom centered image with text -->
-        <div class="col-span-2 flex items-center w-full justify-between bg-gray-50 rounded-lg shadow-lg p-8 mx-auto">
+        <div class="col-span-2 flex items-center w-full justify-between bg-gray-50 rounded-lg shadow-lg p-8 mx-auto hidden lg:block">
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for both</h2>

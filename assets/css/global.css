@@ -38,3 +38,26 @@
             }
 
         }
+
+        .brand-container {
+            display: flex; /* Arrange items in a row */
+            flex-wrap: wrap; /* Wrap items to the next row if needed */
+            justify-content: center; /* Center-align the items */
+            align-items: center; /* Vertically center items */
+            gap: 15px; /* Space between the items */
+            max-width: 100%; /* Prevent overflow */
+            padding: 10px; /* Add padding around the container */
+            box-sizing: border-box; /* Include padding in width calculation */
+          }
+          
+          .brand-container img {
+            max-width: 120px; /* Set a maximum width for logos */
+            width: 100%; /* Let images shrink dynamically */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure the entire image fits */
+            transition: transform 0.2s ease; /* Add a smooth hover effect */
+          }
+          
+          .brand-container img:hover {
+            transform: scale(1.1); /* Slightly enlarge the image on hover */
+          }
