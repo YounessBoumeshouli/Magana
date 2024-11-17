@@ -8,8 +8,9 @@ document.getElementById('menu-btn').addEventListener('click', function() {
 const testimonials = document.querySelectorAll('.testimonial-card');
 const dots = document.querySelectorAll('.dot');
 let currentIndex = 1; 
-
-
+let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
+document.getElementById('numbrecom').innerText= Mypanier.length;
+document.getElementById('numbrecom2').innerText=Mypanier.length;
 function showTestimonial(index) {
 testimonials.forEach((testimonial, i) => {
     

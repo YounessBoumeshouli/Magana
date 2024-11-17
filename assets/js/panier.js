@@ -46,6 +46,7 @@ async function afiche(){
 panairid.innerHTML="";
 
 document.getElementById('numbrecom').innerText=Mypanier.length;
+document.getElementById('numbrecom2').innerText=Mypanier.length;
     const response = await fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json");
     const categories = await response.json();
     categories.categories.forEach(category => {
