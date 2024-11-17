@@ -164,6 +164,7 @@ Mypanier.forEach(produit=>{
 });
 }
 var sub = 0;
+var total = 0
 async function subtotal() {
    var  sub=0;
     const response = await fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json");
@@ -174,6 +175,8 @@ async function subtotal() {
            
                 if (produitlo.id == product.id) {
                     sub += product.price * produitlo.quantite;
+                    total = sub
+
                 }
 
             });
@@ -187,18 +190,19 @@ async function subtotal() {
     localStorage.setItem("sub",sub);
     if(localStorage.getItem('coupon')){
         
-    document.getElementById('Subtotalprice').innerText = localStorage.getItem('coupon');
-    document.getElementById('totalprice').innerText=localStorage.getItem('coupon');
+    document.getElementById('Subtotalprice').innerText = localStorage.getItem('sub');
+    document.getElementById('totalprice').innerText=total*0.9;
+    localStorage.setItem('coupon',total*0.9);
     }
     
 }
- 
+    
 function coupon(){
     console.log('copun');
     if(!(localStorage.getItem('coupon'))){
     if(document.getElementById("couponid").value == "09DD"){
-       let cop = +localStorage.getItem('sub') * 0.9;
-        localStorage.setItem('coupon',cop);
+      
+        localStorage.setItem('coupon',1);
     }
     }
     location.reload();
@@ -312,6 +316,7 @@ form.addEventListener('submit', (e) => {
             email: email2.value.trim(),
             city: city2.value.trim(),
             adrice: adrice2.value.trim(),
+            rib: rib2.value,
             coupon: localStorage.getItem('coupon') || "",
             subtotal: localStorage.getItem('sub') || "",
             dat: (Date.now()).toString()
