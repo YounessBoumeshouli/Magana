@@ -61,3 +61,16 @@
           .brand-container img:hover {
             transform: scale(1.1); /* Slightly enlarge the image on hover */
           }
+
+          #modal1{
+            background-image: url("../images/Ads/cover4.jpg");
+            background-size: cover;
+          }
+          #modal2{
+            background-image: url("../images/Ads/cover5.jpg");
+            background-size: cover;
+          }
+          #modal3{
+            background-image: url("../images/Ads/cover.jpg");
+            background-size: cover;
+          }

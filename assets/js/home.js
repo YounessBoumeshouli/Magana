@@ -1,4 +1,5 @@
 let slideIndex = 1;
+
 let Vectorleft = document.getElementById("Vectorleft")
 let Vectorright = document.getElementById("Vectorright")
 var windowWidth
@@ -47,8 +48,23 @@ function ButtonsResponsive(windowWidth,res){
       Vectorright.style.display = "none"
       
     }
-    
-      if(slideIndex == 7||slideIndex == 8){
+    if(slideIndex == 7){
+      document.getElementById("CategoriesContainer").innerHTML = `
+        <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
+          <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
+            <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+          </div>
+         
+        </div>
+        <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
+          <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
+            <img src="./assets/images/Product/${res.categories[slideIndex].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+          </div>
+         
+        </div>
+      `
+        }
+      if(slideIndex == 8){
         document.getElementById("CategoriesContainer").innerHTML = `
           <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
             <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
@@ -61,6 +77,7 @@ function ButtonsResponsive(windowWidth,res){
     
   }
 }
+
 function showSlides(slideIndex) {
 fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
 .then(res=>res.json())
@@ -75,7 +92,7 @@ fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
      
   }
   
-  if(slideIndex <7){
+  if(slideIndex <8){
     document.getElementById("CategoriesContainer").innerHTML = `
     <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
       <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
@@ -180,6 +197,7 @@ function dataHome(res){
   <img src="./assets/images/Brand/${res[0].brands.brand3}"  class="max-w-[120px] w-full h-auto">
   <img src="./assets/images/Brand/${res[0].brands.brand4}"  class="max-w-[120px] w-full h-auto">
   <img src="./assets/images/Brand/${res[0].brands.brand5}"  class="max-w-[120px] w-full h-auto">
+
   `
 document.getElementById("news").innerHTML = `
   <!-- Left side featured news item (occupies 2 columns on large screens) -->
@@ -221,37 +239,42 @@ document.getElementById("news").innerHTML = `
 
 
 modals.innerHTML = `
-      <div class=" md:grid md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
+      <div class=" md:grid md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto mb-4">
         <!-- Top left image with text -->
-        <div class="flex items-center justify-between  bg-red-200 rounded-lg shadow-lg p-8">
-          <div class="text-left">
-            <p class="text-sm text-orange-500 font-semibold">Classic Fussional Essenial</p>
+        <div class="flex flex-col items-center justify-between  bg-red-200 rounded-lg shadow-lg p-8" id="modal1">
+          <div class="text-left w-full">
+            <p class="text-sm text-white font-semibold">Classic Fussional Essenial</p>
             <h2 class="text-2xl font-bold text-gray-800">Classical Watch</h2>
-            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">Shop Now</a>
+            
           </div>
           <img src="./assets/images/Product/${res[0].Modals.modal}" class="w-40 h-auto object-contain" alt="Watch">
+               <a href="/views/catalogue.html" class="bg-yellow-500 text-gray-800 px-2 mt-4  rounded-full  hover:bg-yellow-600">Shop Now</a>
         </div>
     
         <!-- Top right image with text -->
-        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8 hidden md:block lg:block">
-          <div class="text-left">
-            <p class="text-sm text-orange-500 font-semibold">From $500</p>
-            <h2 class="text-2xl font-bold text-gray-800">Watches for her</h2>
-            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
+        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8 "id="modal2">
+          <div class="text-left ">
+            <p class="text-sm text-white font-semibold">From $500</p>
+            <h2 class="text-2xl font-bold text-white">Watches for her</h2>
+               <a href="/views/catalogue.html" class=" text-white mt-8 py-2 px-6 hover:bg-yellow-600">More Details</a>
+           
           </div>
           <img src="./assets/images/Product/${res[0].Modals.modal2}" class="w-40 h-auto object-contain" alt="Watch">
         </div>
     
         <!-- Bottom centered image with text -->
-        <div class="col-span-2 flex items-center w-full justify-between bg-gray-50 rounded-lg shadow-lg p-8 mx-auto hidden lg:block">
+        <div class="col-span-2 flex items-center w-full justify-between bg-gray-50 rounded-lg shadow-lg p-8 mx-auto"id="modal3">
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for both</h2>
-            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block"> Explore now </a>
+              <a href="/views/catalogue.html" class="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full hover:bg-yellow-600">Explore More</a>
           </div>
+       
           <img src="./assets/images/Product/${res[0].Modals.modal3}" class="w-40 h-auto object-contain" alt="Watch">
+              
         </div>
       </div>
+          
     `
 
   document.getElementById("ads").innerHTML = `
@@ -306,7 +329,7 @@ function showMAx(res){
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for him</h2>
-            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
+            <a href="/views/catalogue.html" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
           </div>
           <img src="./assets/images/Product/${box[0].image}" class="w-40 h-auto object-contain scale-[1.8] rotate-[30deg]"  alt="Watch">
         </div>
@@ -316,7 +339,7 @@ function showMAx(res){
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for her</h2>
-            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
+            <a href="/views/catalogue.html" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
           </div>
           <img src="./assets/images/Product/${box[1].image}" class="w-40 h-auto object-contain scale-[1.8] rotate-[30deg]" alt="Watch">
         </div>
