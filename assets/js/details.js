@@ -6,6 +6,18 @@ let incBtn = document.getElementById('dt-increase-quantity');
 let quantity = document.getElementById('dt-quantity');
 let addToCart = document.getElementById('dt-add-to-cart');
 
+function fermepanier(){
+    if(document.getElementById('panierid').classList.contains('hidden')){
+        document.getElementById('panierid').classList.remove("hidden");
+        document.getElementById('panierid').classList.add("flex");
+    }
+    else {
+        
+        document.getElementById('panierid').classList.remove("flex");
+        document.getElementById('panierid').classList.add("hidden");
+  
+    }
+  }
 
 decBtn.addEventListener('click', function () {
     quantity.value = quantity.value > 1 ? quantity.value - 1 : 1
@@ -53,9 +65,9 @@ document.getElementById('dt-add-to-cart').addEventListener('click', function (e)
 
     // addToCart.href = `/views/panier.html`;
 })
-let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
-document.getElementById('numbrecom').innerText=Mypanier.length;
-document.getElementById('numbrecom2').innerText=Mypanier.length;
+let Mpanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
+document.getElementById('numbrecom').innerText=Mpanier.length;
+document.getElementById('numbrecom2').innerText=Mpanier.length;
     fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
         .then(res => res.json())
         .then(res =>

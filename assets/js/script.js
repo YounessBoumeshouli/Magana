@@ -10,6 +10,21 @@ document.getElementById('filter-menu-btn').addEventListener('click', function ()
     filterMenu.classList.toggle('hidden');
 });
 
+function fermepanier(){
+    if(document.getElementById('panierid').classList.contains('hidden')){
+        document.getElementById('panierid').classList.remove("hidden");
+        document.getElementById('panierid').classList.add("flex");
+    }
+    else {
+        
+        document.getElementById('panierid').classList.remove("flex");
+        document.getElementById('panierid').classList.add("hidden");
+  
+    }
+  }
+  
+var panairid =document.getElementById("panier1");
+var page =document.getElementById("page1");
 // Pagination and Product Display
 let currentPage = 1;
 const itemsPerPage = 6;

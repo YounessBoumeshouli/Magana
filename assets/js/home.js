@@ -109,7 +109,37 @@ fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
   
  return slideIndex
 }
+async function subtotal() {
+  var  sub=0;
+   const response = await fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json");
+   const categories = await response.json();
+   Mypanier.forEach(produitlo => {
+   categories.categories.forEach(category => {
+       category.products.forEach(product => {
+          
+               if (produitlo.id == product.id) {
+                   sub += product.price * produitlo.quantite;
+                   total = sub
 
+               }
+
+           });
+
+       });
+
+   });
+
+   document.getElementById('Subtotalprice').innerText = (sub).toFixed(2);
+   document.getElementById('totalprice').innerText=(sub).toFixed(2);
+   localStorage.setItem("sub",sub);
+   if(localStorage.getItem('coupon')){
+       
+   document.getElementById('Subtotalprice').innerText = (sub).toFixed(2);
+   document.getElementById('totalprice').innerText=(total*0.9).toFixed(2);
+   localStorage.setItem('coupon',total*0.9);
+   }
+   
+}
 
 function ShowBrand(){
   document.getElementById("BrandsContainer").innerHTML=""
@@ -122,7 +152,7 @@ function ShowBrand(){
   )
   
 }
-let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
+
 document.getElementById('numbrecom').innerText=Mypanier.length;
 document.getElementById('numbrecom2').innerText=Mypanier.length;
 ShowBrand()
@@ -306,3 +336,4 @@ function ShowPopularWatches(){
 
 
 ShowPopularWatches();
+

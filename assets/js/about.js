@@ -3,7 +3,18 @@ document.getElementById('menu-btn').addEventListener('click', function() {
   const mobileMenu = document.getElementById('mobile-menu');
   mobileMenu.classList.toggle('hidden');
 });
+function fermepanier(){
+  if(document.getElementById('panierid').classList.contains('hidden')){
+      document.getElementById('panierid').classList.remove("hidden");
+      document.getElementById('panierid').classList.add("flex");
+  }
+  else {
+      
+      document.getElementById('panierid').classList.remove("flex");
+      document.getElementById('panierid').classList.add("hidden");
 
+  }
+}
 
 const testimonials = document.querySelectorAll('.testimonial-card');
 const dots = document.querySelectorAll('.dot');

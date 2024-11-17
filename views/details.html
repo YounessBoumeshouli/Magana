@@ -59,6 +59,19 @@
         </div>
       </header>
     <main id="dt-main" class="md:mx-32 mt-5 mb-10 flex  flex-wrap md:flex-nowrap ">
+        <section class="w-80 h-lvh bg-white fixed right-0 top-0  flex flex-col items-center hidden" 
+		id="panierid">
+			<div class="flex justify-between w-11/12 mt-2   h-14 items-center">
+				<label> Shopping cart</label>
+				<button onclick="fermepanier()"> X</button>
+			</div>
+			<article class="flex w-full mb-10 flex-col overflow-y-auto" id="panier1">
+				
+			</article>
+			<article class="w-11/12" id="panier1button">
+
+			</article>
+		</section>
         <section class="dt-watch-side grid grid-cols-3 shadow-sm md:w-1/2" >
             <div class="col-span-3 max-w-full rounded-2xl border-2 hover:border-black bg-orange-50 shadow-2xl mb-2 flex  justify-center cursor-pointer" id="dt-img-principale">
                 <!-- <img id="dt-main-image" src="../assets/images/Product/FossilWomen.jpg" alt="L'image principale de la montre"> -->
@@ -152,6 +165,7 @@
         });
       </script>
     <script src="/assets/js/details.js" ></script>
+    <script src="/assets/js/popup.js"></script>
 </body>
 
 </html>
