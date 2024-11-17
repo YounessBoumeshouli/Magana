@@ -191,7 +191,7 @@ async function subtotal() {
     localStorage.setItem("sub",sub);
     if(localStorage.getItem('coupon')){
         
-    document.getElementById('Subtotalprice').innerText = localStorage.getItem('sub');
+    document.getElementById('Subtotalprice').innerText = (sub).toFixed(2);
     document.getElementById('totalprice').innerText=(total*0.9).toFixed(2);
     localStorage.setItem('coupon',total*0.9);
     }
