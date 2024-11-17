@@ -53,8 +53,9 @@ document.getElementById('dt-add-to-cart').addEventListener('click', function (e)
 
     // addToCart.href = `/views/panier.html`;
 })
-
-
+let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
+document.getElementById('numbrecom').innerText=Mypanier.length;
+document.getElementById('numbrecom2').innerText=Mypanier.length;
     fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
         .then(res => res.json())
         .then(res =>

@@ -11,44 +11,51 @@
 </head>
 <body>
 	
-	<header class="bg-white shadow-md">
+    <header class="bg-white shadow-md">
         <div class="container mx-auto flex items-center justify-between p-4">
 
-		  <div class="flex items-center">
-			  <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20" >
-			</div>
-	
-		 
-		  <nav class="hidden md:flex space-x-8">
-			<a href="/index.html" class="text-gray-800 hover:text-gray-600">Home</a>
+          <div class="flex items-center md:ml-32">
+              <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20">
+            </div>
+    
+         
+          <nav class="hidden md:flex space-x-16 mx-52">
+            <a href="/index.html" class="text-gray-800 hover:text-gray-600">Home</a>
             <a href="/views/catalogue.html" class="text-gray-800 hover:text-gray-600">Catalogue</a>
-            <a href="/views/about.html" class="text-gray-800 hover:text-gray-600">About</a> 
-				<p class="text-green-400 rounded-md  " id ="numbrecom">2</p>
-			  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6" onclick="fermepanier()" id ="logoPanier" >
-			  
-			</a>  
-		  </nav>
-	
-		  <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
-			  <a href="#" class="text-gray-800 text-2xl">
-				  <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
-				</a>  
-				<a href="#" class="text-orange-500 text-2xl" id="panierNav">
-					<p class="text-green-400 rounded-md  " id ="numbrecom">2</p>
-				  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6" id="logopanier">
-				</a>  
-		  </button>
-		</div>
-	
+            <a href="./about.html" class="text-gray-800 hover:text-gray-600">About</a>
+            <a href="./panier.html" id="panierNav">
+                <div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1   top-8 flex items-center border-2">
+                    <p class=" rounded-md   mx-auto " id ="numbrecom">0</p>
+                </div>
+                  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6  " onclick="fermepanier()" id ="logoPanier" >
+              </a> 
+          </nav>
+          
+          <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+            <div class="flex gap-10 ">
+                <a href="./panier.html" id="panierNav">
+					<div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1   top-8 flex items-center border-2">
+						<p class=" rounded-md   mx-auto " id ="numbrecom2">0</p>
+					</div>
+					  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6  " onclick="fermepanier()" id ="logoPanier" >
+				  </a> 
+                <a href="#" class="text-gray-800 text-2xl">
+                    <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
+                  </a>  
+                 
+            </div>
+             
+          </button>
+        </div>
+    
   
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
           <a href="/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
           <a href="/views/catalogue.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
-          <a href="/views/about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+          <a href="./about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
 
         </div>
       </header>
-
 	<main class=" mx-auto w-10/12 my-12">
 		<section id="Formulaire" class="hidden">
 			<div class="container mx-auto p4-10">
@@ -177,8 +184,14 @@
         </div>
         <p class="text-gray-500">Copyright ©2024 All rights reserved</p>
     </footer>
+	<script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+          const mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
 	<script src="./../assets/js/panier.js"></script>
-
+	
 </body>
 
 <html>

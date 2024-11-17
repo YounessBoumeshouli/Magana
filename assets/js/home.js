@@ -122,6 +122,9 @@ function ShowBrand(){
   )
   
 }
+let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
+document.getElementById('numbrecom').innerText=Mypanier.length;
+document.getElementById('numbrecom2').innerText=Mypanier.length;
 ShowBrand()
 
 let HorizontalContainer = document.getElementById("ads");
