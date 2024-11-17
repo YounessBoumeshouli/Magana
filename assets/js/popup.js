@@ -67,3 +67,45 @@ async function afiche(){
         window.location.href = "panier.html";
     }
     afiche()
+    function suprimepainer(index){
+        for(let i = 0 ;i<Mypanier.length ;i++)
+            if(index==Mypanier[i].id)
+                Mypanier.splice(i,1);
+            localStorage.setItem("ordreToCard",JSON.stringify(Mypanier));
+            subtotal();
+            // console.log(Mypanier);
+    
+    location.reload();
+    }
+
+    async function subtotal() {
+        var  sub=0;
+         const response = await fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json");
+         const categories = await response.json();
+         Mypanier.forEach(produitlo => {
+         categories.categories.forEach(category => {
+             category.products.forEach(product => {
+                
+                     if (produitlo.id == product.id) {
+                         sub += product.price * produitlo.quantite;
+                         total = sub
+     
+                     }
+     
+                 });
+     
+             });
+     
+         });
+     
+         document.getElementById('Subtotalprice').innerText = (sub).toFixed(2);
+         document.getElementById('totalprice').innerText=(sub).toFixed(2);
+         localStorage.setItem("sub",sub);
+         if(localStorage.getItem('coupon')){
+             
+         document.getElementById('Subtotalprice').innerText = (sub).toFixed(2);
+         document.getElementById('totalprice').innerText=(total*0.9).toFixed(2);
+         localStorage.setItem('coupon',total*0.9);
+         }
+         
+     }
