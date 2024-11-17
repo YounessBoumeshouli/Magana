@@ -3,27 +3,22 @@ document.getElementById('menu-btn').addEventListener('click', function() {
   const mobileMenu = document.getElementById('mobile-menu');
   mobileMenu.classList.toggle('hidden');
 });
-function fermepanier(){
-  if(document.getElementById('panierid').classList.contains('hidden')){
-      document.getElementById('panierid').classList.remove("hidden");
-      document.getElementById('panierid').classList.add("flex");
-  }
-  else {
-      
-      document.getElementById('panierid').classList.remove("flex");
-      document.getElementById('panierid').classList.add("hidden");
-
-  }
-}
-
-const testimonials = document.querySelectorAll('.testimonial-card');
-const dots = document.querySelectorAll('.dot');
-let currentIndex = 1; 
 
 
-function showTestimonial(index) {
-testimonials.forEach((testimonial, i) => {
-    
+const paginationBtns = document.querySelectorAll(".pagination-btn");
+console.log('get 1');
+
+function updateTestimonial(index) {
+  const testimonials = document.querySelectorAll(".testimonial");
+  console.log(testimonials);
+
+
+  testimonials.forEach((testimonial, i) => {
+    console.log('get 2');
+    testimonial.classList.remove("active");
+    paginationBtns[i].classList.remove("active");
+
+
     if (i === index) {
       testimonial.classList.add("active");
       paginationBtns[i].classList.add("active");

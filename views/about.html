@@ -149,58 +149,47 @@ h4 {
     </style>
 
 <body class="bg-white font-sans">
-  <header class="bg-white shadow-md">
-    <div class="container mx-auto flex items-center justify-between p-4">
+        <header class="bg-white shadow-md">
+          <div class="container mx-auto flex items-center justify-between p-4">
 
-            <div class="flex items-center">
+            <div class="flex items-center ml-22 " >
                 <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20">
               </div>
       
            
-            <nav class="hidden md:flex space-x-8">
-              <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
-              <a href="#" class="text-gray-800 hover:text-gray-600">Catalogue</a>
-              <a href="#" class="text-gray-800 hover:text-gray-600">Détails</a>
+            <nav class="hidden md:flex space-x-8 mr-32">
+              <a href="/index.html" class="text-gray-800 hover:text-gray-600">Home</a>
+              <a href="catalogue.html" class="text-gray-800 hover:text-gray-600">Catalogue</a>
               <a href="#" class="text-gray-800 hover:text-gray-600">About</a>
-              <a href="#" class="text-orange-500 text-2xl">
+              <a href="panier.html" class="text-orange-500 text-2xl">
                 <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
               </a>  
             </nav>
       
             <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+              <div class="flex gap-10">
+                <a href="panier.html" class="text-orange-500 text-2xl">
+                  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
+                </a>  
                 <a href="#" class="text-gray-800 text-2xl">
-                    <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
-                  </a>  
-                  <a href="#" class="text-orange-500 text-2xl">
-                    <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
-                  </a>  
+                  <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
+                </a>  
+              
+              </div>
+                
             </button>
           </div>
       
     
           <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Détails</a>
+            <a href="/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+            <a href="catalogue.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
             <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
           </div>
         </header>
 
     
     <section class="relative">
-      <section class="w-80 h-lvh bg-white fixed right-0 top-0  flex flex-col items-center hidden" 
-      id="panierid">
-        <div class="flex justify-between w-11/12 mt-2   h-14 items-center">
-          <label> Shopping cart</label>
-          <button onclick="fermepanier()"> X</button>
-        </div>
-        <article class="flex w-full mb-10 flex-col overflow-y-auto" id="panier1">
-          
-        </article>
-        <article class="w-11/12" id="panier1button">
-  
-        </article>
-      </section>
         <img src="/assets/images/Manar-images/Ab-header.jpg" alt="Background" class="w-full h-72 object-cover">
         <div class="absolute inset-0 flex items-center justify-center text-4xl text-white font-light">
             About page
@@ -443,10 +432,10 @@ h4 {
 
 
 
-  <footer class="bg-gray-900 text-center py-6">
-    <div class="flex  flex-row justify-center space-x-6 items-center space-y-4 space-y-0 mb-4">
+<footer class="bg-gray-900 text-center py-6">
+    <div class="flex flex-col md:flex-row md:justify-center md:space-x-6 items-center space-y-4 md:space-y-0 mb-4">
         <a href="#" class="text-orange-500 text-2xl">
-            <img src="../assets/images/magana images/twitter (1).png" alt="icon1" class="w-6 h-6 mt-4">
+            <img src="../assets/images/magana images/twitter (1).png" alt="icon1" class="w-6 h-6">
         </a>
         <a href="#" class="text-orange-500 text-2xl">
             <img src="../assets/images/magana images/facebook (1).png" alt="icon2" class="w-6 h-6">
@@ -461,7 +450,8 @@ h4 {
     <p class="text-gray-500">Copyright ©2024 All rights reserved</p>
 </footer>
 
+
+
   <script src="../assets/js/about.js"></script>
-  <script src="../assets/js/popup.js"></script>
 </body>
 </html>
