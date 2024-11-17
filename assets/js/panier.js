@@ -60,7 +60,7 @@ document.getElementById('numbrecom2').innerText=Mypanier.length;
                                             <p class=" ml-10 text-blue-500      "> ${product.title}</p> 
                                             <button class=" ml-44  text-orange-500" onclick="suprimepainer(${produitlo.id})" >X </button>
                                             <p class="   ml-24  " >${produitlo.quantite}× $${product.price}</p>
-                                            <p class="   ml-12   " >Subtotal: $${(produitlo.quantite*product.price).toFixed(4)}</p>
+                                            <p class="   ml-12   " >Subtotal: $${(produitlo.quantite*product.price).toFixed(2)}</p>
                                         </div>
                                     </div>
                         `;
@@ -90,7 +90,7 @@ document.getElementById('numbrecom2').innerText=Mypanier.length;
                                     </div>
                                     <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:justify-center md:w-8/12 md:h-32">
                                         <lable class="ml-3 text-lg font-serif md:hidden"> subtotal : </lable>
-                                        <p class="mr-3 ">$${(produitlo.quantite*product.price).toFixed(4)}</p>
+                                        <p class="mr-3 ">$${(produitlo.quantite*product.price).toFixed(2)}</p>
                                     </div>
                                 </article>
 
@@ -132,8 +132,8 @@ document.getElementById('numbrecom2').innerText=Mypanier.length;
 }     
 function carte(numbre){
     numbre = (+numbre).toFixed(2);
-    document.getElementById('Subtotalprice').innerText=(numbre).toFixed(4);
-    document.getElementById('totalprice').innerText=(numbre).toFixed(4);
+    document.getElementById('Subtotalprice').innerText=(numbre).toFixed(2);
+    document.getElementById('totalprice').innerText=(numbre).toFixed(2);
     coupon();
 }
 afiche();
@@ -186,13 +186,13 @@ async function subtotal() {
 
     });
 
-    document.getElementById('Subtotalprice').innerText = (sub).toFixed(4);
-    document.getElementById('totalprice').innerText=(sub).toFixed(4);
+    document.getElementById('Subtotalprice').innerText = (sub).toFixed(2);
+    document.getElementById('totalprice').innerText=(sub).toFixed(2);
     localStorage.setItem("sub",sub);
     if(localStorage.getItem('coupon')){
         
-    document.getElementById('Subtotalprice').innerText = localStorage.getItem('sub');
-    document.getElementById('totalprice').innerText=total*0.9;
+    document.getElementById('Subtotalprice').innerText = (sub).toFixed(2);
+    document.getElementById('totalprice').innerText=(total*0.9).toFixed(2);
     localStorage.setItem('coupon',total*0.9);
     }
     
