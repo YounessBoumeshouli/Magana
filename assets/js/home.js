@@ -253,7 +253,7 @@ modals.innerHTML = `
             
           </div>
           <img src="./assets/images/Product/${res[0].Modals.modal}" class="w-40 h-auto object-contain" alt="Watch">
-               <a href="/views/catalogue.html" class="bg-yellow-500 text-gray-800 px-2 mt-4  rounded-full  hover:bg-yellow-600">Shop Now</a>
+               <a href="/views/catalogue.html" class="bg-red-400 text-gray-800 px-2 mt-4 mr-60    hover:bg-yellow-600">Shop Now</a>
         </div>
     
         <!-- Top right image with text -->
@@ -272,11 +272,11 @@ modals.innerHTML = `
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for both</h2>
-              <a href="/views/catalogue.html" class="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full hover:bg-yellow-600">Explore More</a>
+            
           </div>
        
           <img src="./assets/images/Product/${res[0].Modals.modal3}" class="w-40 h-auto object-contain" alt="Watch">
-              
+                <a href="/views/catalogue.html" class="bg-yellow-500 text-gray-800 py-2 mt-18 px-6 rounded-full hover:bg-yellow-600">Explore More</a>
         </div>
       </div>
           
