@@ -48,7 +48,7 @@ async function afiche(){
                    
                 document.getElementById('panier1button').innerHTML=`
                                 <div class="flex flex-row justify-between w-full text-white">
-                                    <button class="bg-orange-500 w-20 ml-3 rounded-xl h-8 on" onclick="pagePanier()">View cart </button>
+                                    <button class="bg-orange-500 w-20 ml-3 rounded-xl h-8 " onclick="pagePanier()">View cart </button>
                                     <button class="bg-orange-500 mr-3 w-20 rounded-xl">Checkout</button>
                                 </div>
                 `  ;
@@ -64,7 +64,7 @@ async function afiche(){
                 
     }    
     function pagePanier(){
-        window.location.href = "panier.html";
+        window.location.href = "/views/panier.html";
     }
     afiche()
     function suprimepainer(index){
