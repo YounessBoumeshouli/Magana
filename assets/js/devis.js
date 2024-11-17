@@ -90,5 +90,5 @@ function addScript(url) {
     document.head.appendChild(script);
 }
 
-localStorage.clear()
-window.location.href = "../index.html";
+setTimeout(localStorage.clear(),
+window.location.href = "../index.html", 10000); 
