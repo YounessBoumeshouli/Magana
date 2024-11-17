@@ -340,15 +340,15 @@ form.addEventListener('submit', (e) => {
 //     console.log('hover');
 //     document.getElementById('hoverImg').querySelector('img').classList.add('hidden'); 
 // });
-document.getElementById('burger').addEventListener('click',function(){
-    if(document.getElementById('navbarMobil').classList.contains('hidden')){
-        document.getElementById('navbarMobil').classList.remove("hidden");
-        document.getElementById('navbarMobil').classList.add("flex");
-    }
-    else {
+// document.getElementById('burger').addEventListener('click',function(){
+//     if(document.getElementById('navbarMobil').classList.contains('hidden')){
+//         document.getElementById('navbarMobil').classList.remove("hidden");
+//         document.getElementById('navbarMobil').classList.add("flex");
+//     }
+//     else {
         
-        document.getElementById('navbarMobil').classList.remove("flex");
-        document.getElementById('navbarMobil').classList.add("hidden");
+//         document.getElementById('navbarMobil').classList.remove("flex");
+//         document.getElementById('navbarMobil').classList.add("hidden");
 
-    }
-});
+//     }
+// });
