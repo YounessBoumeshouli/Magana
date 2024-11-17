@@ -30,12 +30,13 @@ if (Total == subtotal) {
 }else{
     coupon.innerHTML = "10% discount"
 }
-
+TelechargerLaPage()
 async function TelechargerLaPage(){
     const response =  await fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
     const promise = await response.json()
    ShowProducts(promise)
 }
+
 var i = 0
 function ShowProducts(res){
     res.categories.forEach(category => {
@@ -88,7 +89,16 @@ function addScript(url) {
     script.src = url;
     document.head.appendChild(script);
 }
+function DownloadPDF(){
+    console.log("is working")
+    addScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js')
+html2pdf(document.body)
 
-setTimeout(addScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'),
-html2pdf(document.body),localStorage.clear(),
-window.location.href = "../index.html", 10000); 
+setTimeout( ClearData,2000)
+}
+setTimeout(DownloadPDF,2000);  
+
+function ClearData(){
+    localStorage.clear()
+    window.location.href = "catalogue.html";
+}
