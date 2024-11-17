@@ -79,8 +79,7 @@ function ShowProducts(res){
       })
 
      
-      addScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js');
-      html2pdf(document.body)
+      
 }
 
 function addScript(url) {
@@ -90,5 +89,6 @@ function addScript(url) {
     document.head.appendChild(script);
 }
 
-setTimeout(localStorage.clear(),
+setTimeout(addScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'),
+html2pdf(document.body),localStorage.clear(),
 window.location.href = "../index.html", 10000); 
