@@ -12,3 +12,26 @@
             position: relative;
             ;
         }
+.WatchMove:hover{
+    animation-name: watchMovement;
+    animation-duration: 5s;
+}
+
+        @keyframes watchMovement {
+            0%{
+                transform: scale(1.1);
+            }
+            30%{
+                rotate: 10deg;
+            }
+            60%{
+                rotate: -10deg;
+            }
+            90%{
+                transform: scale(1);
+            }
+            100%{
+                rotate: 0deg;
+            }
+
+        }
