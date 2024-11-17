@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMs9cVxqdbGixzl3G9m78nFvs8F1kpB0f1p3WlH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
     <style>
       
@@ -22,55 +22,170 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        
+
+/* Conteneur principal */
+.testimonials-container {
+  width: 70%;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+  margin-top: 10%;
+
+}
+
+/* Section des témoignages */
+#testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+
+.testimonial {
+  flex: 0 0 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transform: scale(0.8);
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-bottom: 5%;
+}
+
+.testimonial.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+.user-img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
+
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.role {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+
+.rating {
+  font-size: 1rem;
+  color: orange;
+  margin: 10px 0;
+}
+
+
+h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+
+.description {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 50%;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-btn.active {
+  background-color: orange;
+}
+@media (max-width: 768px) {
+  .testimonials-container {
+    width: 90%;
+  }
+  #testimonials-wrapper {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .about-bg {
+            background-size: 0px 0px;
+        }
+
+  .testimonial {
+    flex: 0 0 80%; 
+    margin-bottom: 20px; 
+  }
+
+}
+
     </style>
 
 <body class="bg-white font-sans">
   <header class="bg-white shadow-md">
     <div class="container mx-auto flex items-center justify-between p-4">
 
-      <div class="flex items-center md:ml-32">
-          <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20">
-        </div>
-
-     
-      <nav class="hidden md:flex space-x-16 mx-52">
-        <a href="/index.html" class="text-gray-800 hover:text-gray-600">Home</a>
-        <a href="/views/catalogue.html" class="text-gray-800 hover:text-gray-600">Catalogue</a>
-        <a href="./about.html" class="text-gray-800 hover:text-gray-600">About</a>
-        <div id="panierNav">
-            <div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1   top-8 flex items-center border-2">
-                <p class=" rounded-md   mx-auto " id ="numbrecom">0</p>
-            </div>
-              <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6  " onclick="fermepanier()" id ="logoPanier" >
-          </div> 
-      </nav>
+            <div class="flex items-center">
+                <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20">
+              </div>
       
-      <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
-        <div class="flex gap-10 ">
-            <div id="panierNav">
-      <div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1   top-8 flex items-center border-2">
-        <p class=" rounded-md   mx-auto " id ="numbrecom2">0</p>
-      </div>
-        <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6  " onclick="fermepanier()" id ="logoPanier" >
-    </div> 
-            <a href="#" class="text-gray-800 text-2xl">
-                <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
+           
+            <nav class="hidden md:flex space-x-8">
+              <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
+              <a href="#" class="text-gray-800 hover:text-gray-600">Catalogue</a>
+              <a href="#" class="text-gray-800 hover:text-gray-600">Détails</a>
+              <a href="#" class="text-gray-800 hover:text-gray-600">About</a>
+              <a href="#" class="text-orange-500 text-2xl">
+                <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
               </a>  
-             
-        </div>
-         
-      </button>
-    </div>
+            </nav>
+      
+            <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                <a href="#" class="text-gray-800 text-2xl">
+                    <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
+                  </a>  
+                  <a href="#" class="text-orange-500 text-2xl">
+                    <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
+                  </a>  
+            </button>
+          </div>
+      
+    
+          <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Détails</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+          </div>
+        </header>
 
-
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-      <a href="/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
-      <a href="/views/catalogue.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
-      <a href="./about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
-
-    </div>
-  </header>
     
     <section class="relative">
       <section class="w-80 h-lvh bg-white fixed right-0 top-0  flex flex-col items-center hidden" 
@@ -93,20 +208,24 @@
     </section>
 
     
-    <section class="relative flex flex-col md:flex-row items-center px-8 py-12 about-bg">
-        <div class="absolute inset-0 bg-overlay"></div>
-        <div class="relative w-full md:w-1/2">
-            <div class="absolute bg-orange-500 w-1/2 h-1/2 rounded-full top-1/4 -left-16"></div>
-            <img src="/assets/images/Manar-images/Ab-pic1.jpg" alt="Person" class="relative z-10 w-full md:w-3/4  rounded-lg zoom" >
-        </div>
-        <div class="relative w-full md:w-1/2 mt-8 md:mt-0 md:pl-12 text-center md:text-left text-black">
-            <h2 class="text-3xl font-semibold">About Our Store</h2>
-            <p class="mt-4 leading-relaxed">
-                As a team of four female founders, we started Aloisia Beauty to pursue a shared passion: creating clean, effective, affordably luxurious skincare that leads to real results. We believe in high-performing formulas that can be used on all skin types. We believe in high-performing and anyone achieves their dream skin.
-            </p>
-            <button class="mt-4 px-4 py-2 bg-transparent border border-black rounded hover:bg-black hover:text-white transition duration-300">voir plus</button>
-        </div>
-    </section>
+    <section class="relative flex flex-col md:flex-row items-center px-8 py-12 about-bg sm:bg-none">
+      <div class="absolute inset-0 bg-overlay"></div>
+      <div class="relative w-full md:w-1/2">
+          <div class="absolute bg-orange-500 w-1/2 h-1/2 rounded-full top-1/4 -left-16"></div>
+          <img src="/assets/images/Manar-images/Ab-pic1.jpg" alt="Person" class="relative z-10 w-full md:w-3/4 rounded-lg zoom">
+      </div>
+      <div class="relative w-full md:w-1/2 mt-8 md:mt-0 md:pl-12 text-center md:text-left text-black">
+          <h2 class="text-3xl font-semibold">About Our Store</h2>
+          <p class="mt-4 leading-relaxed">
+              As a team of four female founders, we started Aloisia Beauty to pursue a shared passion: creating clean, effective, affordably luxurious skincare that leads to real results. We believe in high-performing formulas that can be used on all skin types. We believe in high-performing and anyone achieves their dream skin.
+          </p>
+          <button class="mt-4 px-4 py-2 bg-transparent border border-black rounded hover:bg-black hover:text-white transition duration-300">voir plus</button>
+      </div>
+  </section>
+  
+  
+  
+  
     <section class="my-8 mt-0">
       <video controls class="w-full h-auto" autoplay muted loop playsinline>
           <source src="/assets/images/Manar-images/Faire une pub de montre à la maison (Epic broll for watch).mp4" type="video/mp4">
@@ -141,7 +260,7 @@
           <div class="text-center">
               <div class="text-gray-300 text-5xl mb-4">
                
-                  📦
+                <i class="fa-solid fa-box-open"></i>
               </div>
               <h3 class="font-semibold">Sustainabilité de l'emballage</h3>
               <p class="text-gray-400 text-sm mt-2">Nous prenons soin de nos forêts | Certifié FSC</p>
@@ -150,8 +269,7 @@
       
           <div class="text-center">
               <div class="text-gray-300 text-5xl mb-4">
-                 
-                  🚢
+                <i class="fa-solid fa-ship"></i>
               </div>
               <h3 class="font-semibold">Sustainabilité de l'emballage</h3>
               <p class="text-gray-400 text-sm mt-2">Nous prenons soin de nos forêts | Certifié FSC</p>
@@ -161,7 +279,7 @@
           <div class="text-center">
               <div class="text-gray-300 text-5xl mb-4">
                
-                  📄
+                <i class="fa-regular fa-newspaper"></i>
               </div>
               <h3 class="font-semibold">Sustainabilité de l'emballage</h3>
               <p class="text-gray-400 text-sm mt-2">Nous prenons soin de nos forêts | Certifié FSC</p>
@@ -171,8 +289,8 @@
           <div class="text-center">
               <div class="text-gray-300 text-5xl mb-4">
                   
-                  🔽
-              </div>
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
               <h3 class="font-semibold">Sustainabilité de l'emballage</h3>
               <p class="text-gray-400 text-sm mt-2">Nous prenons soin de nos forêts | Certifié FSC</p>
           </div>
@@ -181,7 +299,7 @@
           <div class="text-center">
               <div class="text-gray-300 text-5xl mb-4">
                  
-                  #️⃣
+                <i class="fa-solid fa-hashtag"></i>
               </div>
               <h3 class="font-semibold">Sustainabilité de l'emballage</h3>
               <p class="text-gray-400 text-sm mt-2">Nous prenons soin de nos forêts | Certifié FSC</p>
@@ -190,7 +308,7 @@
           
           <div class="text-center">
               <div class="text-gray-300 text-5xl mb-4">
-                  🖐️
+                <i class="fa-solid fa-hand"></i>
               </div>
               <h3 class="font-semibold">Sustainabilité de l'emballage</h3>
               <p class="text-gray-400 text-sm mt-2">Nous prenons soin de nos forêts | Certifié FSC</p>
@@ -205,51 +323,42 @@
         We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
     </p>
     
-    <section class="container mx-auto py-10 flex justify-center space-x-6">
-       
-      <div class="max-w-xs  shadow-lg overflow-hidden">
+    <section class="container mx-auto py-10">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-6 items-center">
     
-  
-        <img src="/assets/images/Manar-images/Ab-team3.jpg" alt="CEO Photo" class="w-full h-80 object-cover">
-  
-        <div class="p-">
-   
-          <div class="w-full h-1 bg-red-500 mb-4"></div>
-  
-          <h2 class="text-xl font-semibold text-gray-900">Chili Mili</h2>
-          <p class="text-gray-500">CEO & Founder</p>
-        </div>
-      </div>
-    
-      
-        <div class="max-w-xs  shadow-lg overflow-hidden">
-    
-  
-          <img src="/assets/images/Manar-images/Ab-team2.jpg" alt="CEO Photo" class="w-full h-80 object-cover">
-    
-          <div class="p-">
-     
+
+        <div class="max-w-xs shadow-lg overflow-hidden">
+          <img src="/assets/images/Manar-images/Ab-team3.jpg" alt="CEO Photo" class="w-full h-80 object-cover">
+          <div class="p-4">
             <div class="w-full h-1 bg-red-500 mb-4"></div>
-    
             <h2 class="text-xl font-semibold text-gray-900">Chili Mili</h2>
             <p class="text-gray-500">CEO & Founder</p>
           </div>
         </div>
-   
-    <div class="max-w-xs  shadow-lg overflow-hidden">
     
-  
-      <img src="/assets/images/Manar-images/Ab-team1.jpg" alt="CEO Photo" class="w-full h-80 object-cover">
 
-      <div class="p-">
- 
-        <div class="w-full h-1 bg-red-500 mb-4"></div>
-
-        <h2 class="text-xl font-semibold text-gray-900">Chili Mili</h2>
-        <p class="text-gray-500">CEO & Founder</p>
+        <div class="max-w-xs shadow-lg overflow-hidden">
+          <img src="/assets/images/Manar-images/Ab-team2.jpg" alt="CEO Photo" class="w-full h-80 object-cover">
+          <div class="p-4">
+            <div class="w-full h-1 bg-red-500 mb-4"></div>
+            <h2 class="text-xl font-semibold text-gray-900">Chili Mili</h2>
+            <p class="text-gray-500">CEO & Founder</p>
+          </div>
+        </div>
+    
+        <div class="max-w-xs shadow-lg overflow-hidden">
+          <img src="/assets/images/Manar-images/Ab-team1.jpg" alt="CEO Photo" class="w-full h-80 object-cover">
+          <div class="p-4">
+            <div class="w-full h-1 bg-red-500 mb-4"></div>
+            <h2 class="text-xl font-semibold text-gray-900">Chili Mili</h2>
+            <p class="text-gray-500">CEO & Founder</p>
+          </div>
+        </div>
+    
       </div>
-    </div>
-      </section>
+    </section>
+    
+    
 </div>
 
 <div class="flex flex-col items-center py-8 bg-white">
@@ -264,102 +373,71 @@
     </div>
 </div>
 <!-- Testimonials Section -->
-<div class="container mx-auto p-4">
-    <div id="testimonial-carousel" class="flex justify-center items-center space-x-4 transition-transform duration-500">
-    
-        <!-- <div class="testimonial-card p-4 bg-white rounded-lg shadow-md text-center w-48 transform scale-90 transition-transform duration-300">
-            <img src="path/to/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full mx-auto mb-2">
-            <h3 class="font-semibold">Leo</h3>
-            <p class="text-sm text-gray-500">Lead Designer</p>
-            <h4 class="text-lg font-bold mt-2">It was a very good experience</h4>
-            <p class="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet...</p>
-            <div class="text-yellow-400 mt-2">★★★★☆</div>
-        </div>
+<div class="testimonials-container">
+  <div id="testimonials-wrapper">
+  </div>
 
- 
-        <div class="testimonial-card p-4 bg-white rounded-lg shadow-lg text-center w-64 transform scale-100 transition-transform duration-300">
-            <img src="path/to/avatar.jpg" alt="Profile Picture" class="w-16 h-16 rounded-full mx-auto mb-2">
-            <h3 class="font-semibold">Leo</h3>
-            <p class="text-sm text-gray-500">Lead Designer</p>
-            <h4 class="text-lg font-bold mt-2">It was a very good experience</h4>
-            <p class="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet...</p>
-            <div class="text-yellow-400 mt-2">★★★★☆</div>
-        </div>
-
-
-        <div class="testimonial-card p-4 bg-white rounded-lg shadow-md text-center w-48 transform scale-90 transition-transform duration-300">
-            <img src="path/to/avatar.jpg" alt="Profile Picture" class="w-12 h-12 rounded-full mx-auto mb-2">
-            <h3 class="font-semibold">Leo</h3>
-            <p class="text-sm text-gray-500">Lead Designer</p>
-            <h4 class="text-lg font-bold mt-2">It was a very good experience</h4>
-            <p class="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet...</p>
-            <div class="text-yellow-400 mt-2">★★★★☆</div>
-        </div> -->
-    </div>
-
-    <!-- Pagination Dots -->
-    <div class="flex justify-center mt-4 space-x-2">
-        <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer transition-transform duration-300"></span>
-        <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer transition-transform duration-300"></span>
-        <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer transition-transform duration-300"></span>
-        <!-- Add as many dots as needed -->
-    </div>
+  <div class="pagination">
+    <button class="pagination-btn active" data-index="0"></button>
+    <button class="pagination-btn" data-index="1"></button>
+    <button class="pagination-btn" data-index="2"></button>
+  </div>
 </div>
+
 <div class="flex space-x-8 items-start">
-    
-    <div class="w-1/2">
-      <img src="/assets/images/Manar-images/Capture d'écran 2024-11-15 114528.png" alt="FAQ Image" class="w-full">
-    </div>
   
     <!-- FAQ Section -->
-    <div class="w-1/2 space-y-4">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-            FAQ
-        </h2>
-        <div class="w-16 h-1 bg-gray-500 mb-8 "></div>
-      <h2 class="text-2xl font-bold">Le Lorem Ipsum est simplement</h2>
-      <p>Herhangi bir sorunuz var mı?</p>
-      
-       
-      <div>
-        <div class="faq-item border-b border-gray-300 py-2">
-          <button onclick="toggleAnswer(1)" class="flex justify-between w-full text-left">
-            <span>Bu alan soru başlık alanıdır.</span>
-            <span id="arrow-1" class="transform transition-transform">▶</span>
-          </button>
-          <p id="answer-1" class="hidden mt-2 text-gray-600">Voici le texte qui s'affiche lorsque vous cliquez.</p>
-        </div>
-        <div class="faq-item border-b border-gray-300 py-2">
-          <button onclick="toggleAnswer(2)" class="flex justify-between w-full text-left">
-            <span>Bu alan soru başlık alanıdır.</span>
-            <span id="arrow-2" class="transform transition-transform">▶</span>
-          </button>
-          <p id="answer-2" class="hidden mt-2 text-gray-600">Texte pour la deuxième question.</p>
-        </div>
-        <div class="faq-item border-b border-gray-300 py-2">
-            <button onclick="toggleAnswer(3)" class="flex justify-between w-full text-left">
-              <span>Bu alan soru başlık alanıdır.</span>
-              <span id="arrow-3" class="transform transition-transform">▶</span>
-            </button>
-            <p id="answer-3" class="hidden mt-2 text-gray-600">Texte pour la deuxième question.</p>
-          </div>
-          <div class="faq-item border-b border-gray-300 py-2">
-            <button onclick="toggleAnswer(4)" class="flex justify-between w-full text-left">
-              <span>Bu alan soru başlık alanıdır.</span>
-              <span id="arrow-4" class="transform transition-transform">▶</span>
-            </button>
-            <p id="answer-4" class="hidden mt-2 text-gray-600">Texte pour la deuxième question.</p>
-          </div>
-          <div class="faq-item border-b border-gray-300 py-2">
-            <button onclick="toggleAnswer(5)" class="flex justify-between w-full text-left">
-              <span>Bu alan soru başlık alanıdır.</span>
-              <span id="arrow-5" class="transform transition-transform">▶</span>
-            </button>
-            <p id="answer-5" class="hidden mt-2 text-gray-600">Texte pour la deuxième question.</p>
-          </div>
-
+    <div class="w-full flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">
+ 
+      <div class="lg:w-1/2">
+          <img src="/assets/images/Manar-images/Capture d'écran 2024-11-15 114528.png" alt="Image des montres" class="w-full h-auto">
       </div>
-    </div>
+
+      <div class="lg:w-1/2 space-y-4">
+          <h1 class="text-6xl font-semibold text-gray-800 mb-20">FAQ</h1>
+          <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+          <p class="text-2xl">Everything You Need to Know About Our Watches</p>
+  
+          <div>
+              <div class="faq-item border-b border-gray-300 py-2">
+                  <button onclick="toggleAnswer(1)" class="flex justify-between w-full text-left">
+                      <span>What type of watches do you sell?</span>
+                      <span id="arrow-1" class="transform transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                  </button>
+                  <p id="answer-1" class="hidden mt-2 text-gray-600">We offer a wide variety of watches, including luxury, sport, fashion, and smartwatches. Whether you're looking for a classic leather-strapped design or a modern digital watch, we have options for every style and occasion.</p>
+              </div>
+              <div class="faq-item border-b border-gray-300 py-2">
+                  <button onclick="toggleAnswer(2)" class="flex justify-between w-full text-left">
+                      <span>How do I know which size watch is right for me?</span>
+                      <span id="arrow-2" class="transform transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                  </button>
+                  <p id="answer-2" class="hidden mt-2 text-gray-600">To find the perfect size, we recommend measuring your wrist circumference. Most men's watches range from 40mm to 45mm in diameter, while women's watches are typically between 34mm and 38mm. Check the product description for detailed measurements to ensure the watch fits your wrist comfortably.</p>
+              </div>
+              <div class="faq-item border-b border-gray-300 py-2">
+                  <button onclick="toggleAnswer(3)" class="flex justify-between w-full text-left">
+                      <span>Are your watches waterproof?</span>
+                      <span id="arrow-3" class="transform transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                  </button>
+                  <p id="answer-3" class="hidden mt-2 text-gray-600">Many of our watches are water-resistant, but the level of resistance varies by model. Be sure to check the product details for the specific water-resistance rating. For example, a watch rated at 3 ATM is suitable for everyday splashes, while a watch rated at 10 ATM can be worn while swimming.</p>
+              </div>
+              <div class="faq-item border-b border-gray-300 py-2">
+                  <button onclick="toggleAnswer(4)" class="flex justify-between w-full text-left">
+                      <span>Can I return or exchange my watch?</span>
+                      <span id="arrow-4" class="transform transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                  </button>
+                  <p id="answer-4" class="hidden mt-2 text-gray-600">Yes! We offer a 30-day return and exchange policy for all unused items. Watches must be returned in their original condition and packaging. If you receive a damaged or defective watch, please contact us immediately, and we will arrange a return or replacement.</p>
+              </div>
+              <div class="faq-item border-b border-gray-300 py-2">
+                  <button onclick="toggleAnswer(5)" class="flex justify-between w-full text-left">
+                      <span>How long does shipping take?</span>
+                      <span id="arrow-5" class="transform transition-transform"><i class="fa-solid fa-arrow-right"></i></span>
+                  </button>
+                  <p id="answer-5" class="hidden mt-2 text-gray-600">Shipping times vary depending on your location. Typically, orders are processed within 1-2 business days. Domestic shipments usually arrive within 5-7 business days, while international orders may take 10-14 days.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
   </div>
   
 

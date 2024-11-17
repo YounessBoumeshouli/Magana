@@ -3,23 +3,26 @@
     {
       "imagePath": "../assets/images/Manar-images/Ab-test1.jpg",
       "testimonial": "This is a great product!",
-      "testimonial2":"I couldn't be happier with my new watch ! The quality is amazing, and it looks even better in person.! Highly recommend!",
+      "Description":"I couldn't be happier with my new watch ! The quality is amazing, and it looks even better in person.! Highly recommend!",
       "rating": 5,
-      "name": "John Doe"
+      "name": "John Doe",
+      "Role":"Designer"
     },
     {
-      "imagePath": "../images/Manar-images/Ab-test2.jpeg",
+      "imagePath": "../assets/images/Manar-images/Ab-test2.jpeg",
       "testimonial": "Excellent quality!",
-      "testimonial2":" I purchased this as a gift for my husband's birthday, and he absolutely loved it! The watch is elegant yet functional, and the engraving on the back made it extra special.",
+      "Description":" I purchased this as a gift for my husband's birthday, and he absolutely loved it! The watch is elegant yet functional, and the engraving on the back made it extra special.",
       "rating": 4,
-      "name": "Jane Smith"
+      "name": "Jane Smith",
+        "Role":"Architect"
     },
     {
-      "imagePath": "../images/Manar-images/Ab-test3.jpeg,",
-       "testimonial2":"I was a bit hesitant about buying a high-end watch online, but the team made the process so easy. Their customer service was top-notch,",
+      "imagePath": "../assets/images/Manar-images/Ab-test3.jpeg",
+       "Description":"I was a bit hesitant about buying a high-end watch online, but the team made the process so easy. Their customer service was top-notch,",
       "testimonial": "Excellent quality!",
       "rating": 4,
-      "name": "Lola ridaldo"
+      "name": "Lola ridaldo",
+        "Role":"Dev developer"
     }
   ]
 }
