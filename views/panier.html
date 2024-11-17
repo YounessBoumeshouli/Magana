@@ -18,26 +18,38 @@
 			  <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20" >
 			</div>
 	
-		 
+		 <div>
 		  <nav class="hidden md:flex space-x-8">
 			<a href="/index.html" class="text-gray-800 hover:text-gray-600">Home</a>
             <a href="/views/catalogue.html" class="text-gray-800 hover:text-gray-600">Catalogue</a>
             <a href="/views/about.html" class="text-gray-800 hover:text-gray-600">About</a> 
-				<p class="text-green-400 rounded-md  " id ="numbrecom">2</p>
-			  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6" onclick="fermepanier()" id ="logoPanier" >
+			<a>
+				<div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1 top-8 flex items-center border-2">
+					<p class="text-white-400 rounded-md   mx-auto " id ="numbrecom">2</p>
+				</div>
+			  	<img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6" onclick="fermepanier()" id ="logoPanier" >
 			  
 			</a>  
-		  </nav>
-	
-		  <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
-			  <a href="#" class="text-gray-800 text-2xl">
-				  <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
-				</a>  
-				<a href="#" class="text-orange-500 text-2xl" id="panierNav">
-					<p class="text-green-400 rounded-md  " id ="numbrecom">2</p>
-				  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6" id="logopanier">
-				</a>  
-		  </button>
+			
+		</nav>
+		</div>
+		  <div id="menu-btn" class="md:hidden text-gray-800 focus:outline-none flex  gap-5">
+  
+				<a href="#" id="panierNav">
+					<div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1   top-8 flex items-center border-2">
+						<p class=" rounded-md   mx-auto " id ="numbrecom2">0</p>
+					</div>
+					  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6  " onclick="fermepanier()" id ="logoPanier" >
+				  </a> 
+					<img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6" id="burger">
+					<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 mt-6 absolute">
+						<a href="/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+						<a href="/views/catalogue.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
+						<a href="/views/about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+				  
+					  </div>	
+			
+				</div>
 		</div>
 	
   
@@ -153,7 +165,7 @@
 				    </tr>
 				  </tbody>
 				</table>
-				<button class="bg-orange-500 w-full h-10 mt-3 rounded-md"  onclick=" payment()"> Check out </button>
+				<button class="bg-orange-500 w-full h-10 mt-3 rounded-md hover:bg-black hover:text-white"  onclick=" payment()"> Check out </button>
 			</article>
 		</section>
 	</section>
@@ -161,13 +173,13 @@
 	<footer class="bg-gray-900 text-center py-6">
         <div class="flex  flex-row justify-center space-x-6 items-center space-y-4 space-y-0 mb-4">
             <a href="#" class="text-orange-500 text-2xl">
-                <img src="../assets/images/magana images/twitter (1).png" alt="icon1" class="w-6 h-6 mt-4">
+                <img src="../assets/images/magana images/twitter (1).png" alt="icon1" class="w-6 h-6 mt-4 hover:h-7">
             </a>
             <a href="#" class="text-orange-500 text-2xl">
                 <img src="../assets/images/magana images/facebook (1).png" alt="icon2" class="w-6 h-6">
             </a>
             <a href="#" class="text-orange-500 text-2xl">
-                <img src="../assets/images/magana images/instagram.png" alt="icon3" class="w-6 h-6">
+                <img src="../assets/images/magana images/instagram.png" alt="icon3" class="w-6 h-6 ">
             </a>
             <a href="#" class="text-orange-500 text-2xl">
                 <img src="../assets/images/magana images/mail.png" alt="icon4" class="w-6 h-6">
@@ -176,6 +188,7 @@
         <p class="text-gray-500">Copyright ©2024 All rights reserved</p>
     </footer>
 	<script src="./../assets/js/panier.js"></script>
+	<script src="../assets/js/about.js"></script>
 
 </body>
 

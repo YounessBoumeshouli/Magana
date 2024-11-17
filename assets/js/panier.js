@@ -46,6 +46,7 @@ async function afiche(){
 panairid.innerHTML="";
 
 document.getElementById('numbrecom').innerText=Mypanier.length;
+document.getElementById('numbrecom2').innerText=Mypanier.length;
     const response = await fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json");
     const categories = await response.json();
     categories.categories.forEach(category => {
@@ -68,8 +69,9 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
                                     <div class="w-11/12 border-2 h-14 md:h-32 md:justify-center md:w-3/12 flex  items-center">
                                         <button class="ml-3 md:ml-0 md:justify-center text-red-500 hover:text-white text-xl font-serif md:text-center hover:bg-red-500 rounded-3xl w-5" onclick="suprimepainer(${product.id})"> X </button>
                                     </div>
-                                    <div class="w-96  border-2 h-14 md:h-32 justify-center items-center md:border-l-0 md:flex hidden">
-                                        <img src="../assets/images/Product/${product.image}" class="w-44 h-28">
+                                    <div class="w-96  border-2 h-14 md:h-32 justify-center items-center md:border-l-0 md:flex hidden  md:flex-col" id="hoverImg">
+                                        <img src="../assets/images/Product/${product.image}" class="w-44 h-28 hover:bg-black ">
+                          
                                     </div>
                                     <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-l-0 md:border-r-0 md:h-32  md:justify-center">
                                         <lable class="ml-3 text-lg font-serif md:hidden "> Product :  </lable>
@@ -82,9 +84,9 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
                                     <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:border-r-0 md:justify-center md:h-32 ">
                                         <label class="ml-3 font-serif text-lg md:hidden"> Quantity :</label>
                                         <div  class="flex  lg:mr-0 md:mr-0 mr-8  "> 
-                                            <button class="border-2 w-10 h-10 " onclick="incrimet(${produitlo.id})">+</button>
+                                            <button class="border-2 w-10 h-10 hover:bg-orange-500" onclick="incrimet(${produitlo.id})">+</button>
                                             <input type="text" class="w-10 border-2 border-l-0 border-r-0 text-center" value="${produitlo.quantite}" id="quantity${produitlo.id}">
-                                            <button class="w-10 border-2" onclick="descrimet(${produitlo.id})">-</button>
+                                            <button class="w-10 border-2 hover:bg-orange-500 " onclick="descrimet(${produitlo.id})">-</button>
                                         </div>
                                     </div>
                                     <div class="w-11/12 h-14 flex justify-between items-center border-2 border-t-0 md:border-t-2 md:justify-center md:w-8/12 md:h-32">
@@ -108,21 +110,23 @@ document.getElementById('numbrecom').innerText=Mypanier.length;
             <article class="border-2 h-14 w-11/12   md:ml-0   mt-0 flex justify-between "> 
                         <div>
                             <input class="w-32 mt-2 mb-3 rounded-md ml-3 border-2 h-10" placeholder="Coupon code" id="couponid">
-                            <button class="ml-3 bg-orange-500 w-32 mt-2 mb-3 h-10 rounded-md" onclick="coupon()" > Apply coupon </button>
+                            <button class="ml-3 bg-orange-500 w-32 mt-2 mb-3 h-10 rounded-md hover:bg-black hover:text-white" onclick="coupon()" > Apply coupon </button>
                         </div>
-                        <button class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md h-10 "  onclick="ubdate()"> Update cart </button>
+                        <button class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md h-10 hover:bg-black hover:text-white "  onclick="ubdate()"> Update cart </button>
                     </article>`;
             document.getElementById('panier1button').innerHTML=`
                             <div class="flex flex-row justify-between w-full text-white">
-                                <button class="bg-orange-500 w-20 ml-3 rounded-xl h-8 on" onclick="pagePanier()">View cart </button>
-                                <button class="bg-orange-500 mr-3 w-20 rounded-xl">Checkout</button>
+                                <button class="bg-orange-500 w-20 ml-3 rounded-xl h-8 hover:bg-black hover:text-white" onclick="pagePanier()">View cart </button>
+                                <button class="bg-orange-500 mr-3 w-20 rounded-xl hover:bg-black hover:text-white ">Checkout</button>
                             </div>
             `  ;
 
             }
             else{
                 page.innerHTML=`<h1 class="mt-12"> Your cart is currently empty</h1>
-                                <a class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md mt-8 text-center" href="catalogue.html"> shoop </a>
+                                <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-10 h-10 mt-4"  >
+				  
+                                <a class="mr-3 bg-orange-500 w-32 mt-2 mb-3 rounded-md mt-8 text-center hover:bg-black hover:text-white" href="catalogue.html"><p class="h-8"> shoop </p></a>
                 `;
                 document.getElementById('panier1button').innerHTML=`<h1 class="mt-12"> Your cart is currently empty</h1>`  ;
                 document.getElementById("cartTotals").innerHTML=""
@@ -199,9 +203,12 @@ function coupon(){
     if(document.getElementById("couponid").value == "09DD"){
        let cop = +localStorage.getItem('sub') * 0.9;
         localStorage.setItem('coupon',cop);
+        location.reload();
+        document.getElementById("couponid").style.border="solid 2px green";
     }
+    else
+        document.getElementById("couponid").style.border="solid 2px red";
     }
-    Location.reload();
 }
 
 function ubdate(){
@@ -325,5 +332,23 @@ form.addEventListener('submit', (e) => {
         // console.log("erore");
     }
 });
-console.log((Date.now()).toString())
 
+
+// console.log((Date.now()).toString())
+
+// document.getElementById('hoverImg').addEventListener('mouseover', function () {
+//     console.log('hover');
+//     document.getElementById('hoverImg').querySelector('img').classList.add('hidden'); 
+// });
+document.getElementById('burger').addEventListener('click',function(){
+    if(document.getElementById('navbarMobil').classList.contains('hidden')){
+        document.getElementById('navbarMobil').classList.remove("hidden");
+        document.getElementById('navbarMobil').classList.add("flex");
+    }
+    else {
+        
+        document.getElementById('navbarMobil').classList.remove("flex");
+        document.getElementById('navbarMobil').classList.add("hidden");
+
+    }
+});
