@@ -8,7 +8,8 @@ let month =new Date().getMonth()
 let day =new Date().getDay()
 console.log(year,month,day)
 document.getElementById("dateNow").innerText += year
-
+let Mypanier = JSON.parse(localStorage.getItem('ordreToCard')) || [];
+document.getElementById('numbrecom').innerText=Mypanier.length;
 document.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       

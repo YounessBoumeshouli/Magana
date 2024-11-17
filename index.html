@@ -15,7 +15,7 @@
         <div class="container mx-auto flex items-center justify-between p-4">
 
           <div class="flex items-center md:ml-32">
-              <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20" > 
+              <img src="../assets/images/magana images/MA-removebg-preview.png" alt="Logo" class="h-20 w-20">
             </div>
     
          
@@ -23,16 +23,22 @@
             <a href="/index.html" class="text-gray-800 hover:text-gray-600">Home</a>
             <a href="/views/catalogue.html" class="text-gray-800 hover:text-gray-600">Catalogue</a>
             <a href="/views/about.html" class="text-gray-800 hover:text-gray-600">About</a>
-            <a href="/views/panier.html" class="text-orange-500 text-2xl">
-              <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
-            </a>  
+            <a href="/views/panier.html" id="panierNav">
+                <div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1   top-8 flex items-center border-2">
+                    <p class=" rounded-md   mx-auto " id ="numbrecom">0</p>
+                </div>
+                  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6  " onclick="fermepanier()" id ="logoPanier" >
+              </a> 
           </nav>
-    
+          
           <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
             <div class="flex gap-10 ">
-                <a href="#" class="text-orange-500 text-2xl">
-                    <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6">
-                  </a>  
+                <a href="/views/panier.html" id="panierNav">
+					<div class="bg-orange-500 h-5 w-4 rounded-xl absolute ml-1   top-8 flex items-center border-2">
+						<p class=" rounded-md   mx-auto " id ="numbrecom2">0</p>
+					</div>
+					  <img src="../assets/images/magana images/shopping-cart (1).png" alt="icon1" class="w-6 h-6  " onclick="fermepanier()" id ="logoPanier" >
+				  </a> 
                 <a href="#" class="text-gray-800 text-2xl">
                     <img src="../assets/images/magana images/burger-bar (1).png" alt="icon1" class="w-6 h-6">
                   </a>  
@@ -46,7 +52,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
           <a href="/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
           <a href="/views/catalogue.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Catalogue</a>
-          <a href="/views/about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
+          <a href="./about.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About</a>
 
         </div>
       </header>
@@ -150,7 +156,6 @@
         </div>
         <p class="text-gray-500">Copyright ©2024 All rights reserved</p>
     </footer>
-<script src="./assets/js/script.js"></script>
 <script src="./assets/js/home.js"></script>
 </body>
 </html>
