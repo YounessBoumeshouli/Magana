@@ -1,19 +1,22 @@
 let slideIndex = 1;
+let Vectorleft = document.getElementById("Vectorleft")
+let Vectorright = document.getElementById("Vectorright")
+
 showSlides(slideIndex);
-
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// if (window.location.pathname === '/wrong-url') {
-//   // Redirect to the correct URL
-//   window.location.replace('https://google.com');
-// }
+slideIndex = showSlides(slideIndex)
+Vectorleft.addEventListener("click",function(){
+  slideIndex--
+  showSlides(slideIndex)
+})
+Vectorright.addEventListener("click",function(){
+  slideIndex++
+  showSlides(slideIndex)
+})
 let img1  = document.getElementById("img1")
 let HeaderContainer  = document.getElementById("HeaderContainer")
 HeaderContainer.addEventListener('mousemove', function yo(u) {
       img1.className = "";
-  console.log(u.clientX,u.clientY);
+ 
   let bottomImg = (u.clientY - 76)/6
   let rightImg = (u.clientX - 411)/6
   img1.classList.add("relative")
@@ -28,29 +31,51 @@ HeaderContainer.addEventListener('mouseout', function yo(u) {
 
 })
 
-
 function showSlides(slideIndex) {
 fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
 .then(res=>res.json())
 .then(res=>
-
+{
+   Vectorleft.style.display = "block"
+    Vectorright.style.display = "block"
+  if(slideIndex ==1){
+    Vectorleft.style.display = "none"
+     
+  }
+  if(slideIndex == 6){
+    Vectorright.style.display = "none"
+   
+  }
+  if(slideIndex == 7||slideIndex == 8){
+document.getElementById("CategoriesContainer").innerHTML = `
+  <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
+    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
+      <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+    </div>
+   
+  </div>
+`
+  }else{
+    
   document.getElementById("CategoriesContainer").innerHTML = `
   <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
     <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove">
+      <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
     </div>
-    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res.categories[slideIndex].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove">
+    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64 hidden lg:block ">
+      <img src="./assets/images/Product/${res.categories[slideIndex].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
     </div>
-    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res.categories[slideIndex+1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove">
+    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64 hidden lg:block ">
+      <img src="./assets/images/Product/${res.categories[slideIndex+1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove " >
     </div>
   </div>
 `
+  }
+}
 
 ) 
   
-  console.log("Current slide index:", slideIndex);
+ return slideIndex
 }
 
 
@@ -212,35 +237,24 @@ function showMAx(res){
       Container.innerHTML = `
       <div class="grid grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
         <!-- Top left image with text -->
-        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8">
+        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8 overflow-hidden">
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for him</h2>
             <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
           </div>
-          <img src="./assets/images/Product/${box[0].image}" class="w-40 h-auto object-contain" alt="Watch">
+          <img src="./assets/images/Product/${box[0].image}" class="w-40 h-auto object-contain scale-[1.8] rotate-[30deg]"  alt="Watch">
         </div>
     
         <!-- Top right image with text -->
-        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8">
+        <div class="flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8 overflow-hidden">
           <div class="text-left">
             <p class="text-sm text-orange-500 font-semibold">From $500</p>
             <h2 class="text-2xl font-bold text-gray-800">Watches for her</h2>
             <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
           </div>
-          <img src="./assets/images/Product/${box[1].image}" class="w-40 h-auto object-contain" alt="Watch">
+          <img src="./assets/images/Product/${box[1].image}" class="w-40 h-auto object-contain scale-[1.8] rotate-[30deg]" alt="Watch">
         </div>
-    
-        <!-- Bottom centered image with text -->
-        <div class="col-span-2 flex items-center justify-between bg-gray-50 rounded-lg shadow-lg p-8 mx-auto">
-          <div class="text-left">
-            <p class="text-sm text-orange-500 font-semibold">From $500</p>
-            <h2 class="text-2xl font-bold text-gray-800">Watches for both</h2>
-            <a href="#" class="text-sm font-semibold text-gray-600 underline mt-4 inline-block">More Details</a>
-          </div>
-          <img src="./assets/images/Product/${box[2].image}" class="w-40 h-auto object-contain" alt="Watch">
-        </div>
-      </div>
     `;
 
 }
