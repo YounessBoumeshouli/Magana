@@ -1,7 +1,11 @@
 let slideIndex = 1;
 let Vectorleft = document.getElementById("Vectorleft")
 let Vectorright = document.getElementById("Vectorright")
-
+var windowWidth
+window.addEventListener("resize",function(){
+   windowWidth = window.innerWidth
+  console.log(windowWidth)
+})
 showSlides(slideIndex);
 slideIndex = showSlides(slideIndex)
 Vectorleft.addEventListener("click",function(){
@@ -30,47 +34,75 @@ HeaderContainer.addEventListener('mouseout', function yo(u) {
   img1.className = "";
 
 })
-
+function ButtonsResponsive(windowWidth,res){
+  if(windowWidth > 600){
+    if(slideIndex == 6){
+      Vectorright.style.display = "none"
+     
+    }
+  }else{
+    console.log("width low",windowWidth)
+    if(slideIndex == 8){
+      
+      Vectorright.style.display = "none"
+      
+    }
+    
+      if(slideIndex == 7||slideIndex == 8){
+        document.getElementById("CategoriesContainer").innerHTML = `
+          <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
+            <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
+              <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+            </div>
+           
+          </div>
+        `
+          }
+    
+  }
+}
 function showSlides(slideIndex) {
 fetch("https://younessboumeshouli.github.io/MaganaProducts-API-/data.json")
 .then(res=>res.json())
 .then(res=>
 {
+
    Vectorleft.style.display = "block"
     Vectorright.style.display = "block"
+    ButtonsResponsive(windowWidth,res)
   if(slideIndex ==1){
     Vectorleft.style.display = "none"
      
   }
-  if(slideIndex == 6){
-    Vectorright.style.display = "none"
-   
-  }
-  if(slideIndex == 7||slideIndex == 8){
-document.getElementById("CategoriesContainer").innerHTML = `
-  <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
-    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+  
+  if(slideIndex <7){
+    document.getElementById("CategoriesContainer").innerHTML = `
+    <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
+      <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
+        <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+      </div>
+      <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64 hidden lg:block ">
+        <img src="./assets/images/Product/${res.categories[slideIndex].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+      </div>
+      <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64 hidden lg:block ">
+        <img src="./assets/images/Product/${res.categories[slideIndex+1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove " >
+      </div>
     </div>
-   
-  </div>
-`
+  `
   }else{
-    
-  document.getElementById("CategoriesContainer").innerHTML = `
-  <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
-    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
-      <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+    document.getElementById("CategoriesContainer").innerHTML = `
+    <div class="flex justify-center gap-6 p-6 bg-gray-100 rounded-lg shadow-md">
+      <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64">
+        <img src="./assets/images/Product/${res.categories[slideIndex-1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
+      </div>
+     
     </div>
-    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64 hidden lg:block ">
-      <img src="./assets/images/Product/${res.categories[slideIndex].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove ">
-    </div>
-    <div class="CategoryWatch bg-white rounded-lg shadow-lg p-4 flex items-center justify-center w-64 h-64 hidden lg:block ">
-      <img src="./assets/images/Product/${res.categories[slideIndex+1].products[0].image}" class="w-56 h-56 object-cover rounded-md WatchMove " >
-    </div>
-  </div>
-`
+  ` 
   }
+  
+    
+ 
+  
 }
 
 ) 
